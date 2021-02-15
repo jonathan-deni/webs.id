@@ -1,0 +1,4618 @@
+/* ----------------------------------------
+    Stylesheet Guide
+ ------------------------------------------
+
+    1. Base
+    2. Layout
+    3. Components
+    4. Pages
+
+---------------------------------------------------------- */
+
+/* ----------------------------------------
+    1. Base
+ ---------------------------------------- */
+
+    /* ----------------------------------------
+        Reset
+     ---------------------------------------- */
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+        }
+
+        article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video, main {
+            display: block;
+        }
+
+        mark, rp, rt, ruby, summary, time {
+            display: inline;
+        }
+
+        a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt, u, ul, var {
+            background: transparent;
+            border: 0 none;
+            font-weight: inherit;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            vertical-align: top;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none !important;
+            vertical-align: baseline;
+        }
+
+        b, strong {
+            font-weight: bold;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        q {
+            quotes: none;
+        }
+
+        table, table td {
+            padding: 0;
+            border: none;
+            border-collapse: collapse;
+        }
+
+        img {
+            vertical-align: top;
+            max-width: 100%;
+        }
+
+        embed {
+            vertical-align: top;
+        }
+
+        input, textarea {
+            font-family: inherit;
+            -webkit-box-sizing: border-box !important;
+                    box-sizing: border-box !important;
+        }
+
+        input, button {
+            -webkit-appearance: none;
+            outline: none;
+            background: transparent;
+        }
+
+        button::-moz-focus-inner {
+            border: 0;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        textarea {
+            outline: none !important;
+        }
+
+        button {
+            cursor: pointer;
+            color: inherit;
+            text-align: left;
+            font-family: inherit;
+        }
+
+        html, body {
+            min-height: 100%;
+        }
+
+        fieldset, legend, label, select, input, textarea, form, button, optgroup {
+            -webkit-appearance: none !important;
+        }
+
+        .container, .container-fluid {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+
+        .material-icons,
+        .material-icons-outlined {
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        .fa, .fab, .fad, .fal, .far, .fas {
+            line-height: inherit;
+        }
+
+        .row {
+            margin-right: -1rem;
+            margin-left: -1rem;
+        }
+
+        .row > [class*="col-"] {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+    /* ----------------------------------------
+        Global
+    ---------------------------------------- */
+
+        body {
+            background-color: #f5f6f6;
+            overflow-x: hidden;
+            overflow-y: initial !important;
+        }
+
+        html {
+            overflow-y: initial !important;
+        }
+
+        ::-webkit-selection {
+            color: #fff;
+            background-color: #363c42;
+        }
+
+        ::-moz-selection {
+            color: #fff;
+            background-color: #363c42;
+        }
+
+        ::selection {
+            color: #fff;
+            background-color: #363c42;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .mad-page-wrapper {
+            overflow: hidden;
+        }
+
+        [data-bg-image-src] {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .animated {
+            -webkit-animation-duration: 500ms;
+            animation-duration: 500ms;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+    /* ----------------------------------------
+        Typography
+    ---------------------------------------- */
+
+        :root {
+            font-size: 14px;
+        }
+
+        body {
+            font-family: "Muli", sans-serif;
+            font-size: 1rem;
+            line-height: 2rem;
+            font-weight: normal;
+            color: #4a4d4f;
+        }
+
+        address:not(:last-child) {
+            margin-bottom: 1.625rem;
+        }
+
+        q {
+            font-style: italic;
+        }
+
+        small {
+            font-size: 0.875rem;
+        }
+
+        sub, sup {
+            position: relative;
+            font-size: 75%;
+            line-height: 0;
+            vertical-align: baseline;
+        }
+
+        sub {
+            bottom: -0.25em;
+        }
+
+        sup {
+            top: -0.5em;
+        }
+
+        q, kbd, strong, em, tt, var, span, del, big, small {
+            vertical-align: baseline;
+        }
+
+        pre {
+            overflow: auto;
+        }
+
+        pre:not(:last-child) {
+            margin-bottom: 1.625rem;
+        }
+
+        code {
+            overflow: auto;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        pre, code, kbd, tt, var {
+            font-size: 1rem;
+            line-height: 1.625;
+            padding: 5px 10px;
+            color: #b1b1b1;
+            background-color: #f8f8f8;
+            border: 1px solid #eaeaea;
+        }
+
+        mark {
+            color: #fff;
+            background-color: #313131;
+        }
+
+        /* ----------------------------------------
+            Headings
+        ---------------------------------------- */
+
+            h1, h2, h3, h4, h5, h6 {
+                color: #191c1f;
+                font-family: "Muli", sans-serif;
+                font-weight: bold;
+            }
+
+            h1:not(:last-child), h2:not(:last-child), h3:not(:last-child), h4:not(:last-child), h5:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+
+            h1 {
+                font-size: 2.625rem;
+                line-height: 3rem;
+            }
+
+            h2 {
+                font-size: 2.25rem;
+                line-height: 1;
+            }
+
+            h3 {
+                font-size: 1.875rem;
+                line-height: 2.5rem;
+            }
+
+            h4 {
+                font-size: 1.4286rem;
+                line-height: 2rem;
+            }
+
+            h5 {
+                font-size: 1.2857rem;
+                line-height: 1.5rem;
+            }
+
+            h6 {
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+
+            h4:not(:last-child),
+            h5:not(:last-child),
+            h6:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            .mad-title.no-pd:not(:last-child) {
+                margin-bottom: 0;
+            }
+
+        /* ----------------------------------------
+            Paragraphs
+        ---------------------------------------- */
+
+            p{
+                line-height: 2rem;
+            }
+
+            p:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+
+            .mad-text-small {
+                font-size: 0.875rem;
+                line-height: 1.5rem;
+            }
+
+            p.mad-text-small:not(:last-child) {
+                margin-bottom: 1.3125rem;
+            }
+
+            .mad-text-micro {
+                font-size: 0.7857rem;
+                color: #8e9194;
+            }
+
+            .mad-text-small {
+                font-size: 0.9286rem;
+                line-height: 1.5rem;
+                color: #686d71;
+            }
+
+            .mad-text-medium {
+                font-size: 1.125rem;
+                font-weight: 500;
+                color: #000;
+            }
+
+            .mad-text-low {
+                font-size: 13px;
+            }
+
+            .mad-text-extra {
+                font-weight: 800;
+            }
+
+            .mad-text-color-red {
+                color: #e63f3f;
+            }
+
+            .no-more {
+                background: #dff0f9;
+                color: #2186c4;
+                font-size: 0.8571rem;
+                line-height: 1rem;
+                padding: 0.9286rem 2rem;
+                border: 1px solid #a0c9e2;
+                border-radius: 0.5rem;
+                letter-spacing: 0.1px;
+            }
+
+        /* ----------------------------------------
+            Links
+        ---------------------------------------- */
+
+            a {
+                color: #2186c4;
+            }
+
+            .mad-link,
+            a,
+            button {
+                transition: all .5s ease;
+            }
+
+            .mad-link {
+                display: inline-block;
+                line-height: 1.5rem;
+            }
+
+            .mad-link:hover {
+                text-decoration: underline;
+            }
+
+            .mad-img-link {
+                display: flex;
+            }
+
+            .mad-link.small-size {
+                font-size: 0.8571rem;
+                margin-left: 2rem;
+                line-height: 1rem;
+            }
+
+        /* ----------------------------------------
+            Icons
+        ---------------------------------------- */
+
+            [class*="mad-font-icon"] {
+                line-height: 1;
+            }
+
+        /* ----------------------------------------
+            Colors
+        ---------------------------------------- */
+
+            
+
+    /* ----------------------------------------
+        Utils classes
+    ---------------------------------------- */
+
+        .mad-d-none {
+            display: none;
+        }
+
+        .mad-fw-bold {
+            font-weight: bold;
+        }
+
+        .mad-tt-uppercase {
+            text-transform: uppercase;
+        }
+
+        .mad-d-down-xxxl-none {
+            display: none;
+        }
+
+        .mad-fw-down-xxxl-bold {
+            font-weight: bold;
+        }
+
+        .alignleft {
+            float: left;
+        }
+
+        .alignright {
+            float: right;
+        }
+        
+        .align-left {
+            text-align: left;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        img[class*="align"] {
+            margin-bottom: 0.875rem;
+        }
+
+        img.alignleft{
+            margin-right: 1.875rem;
+        }
+
+        img.alignright{
+            margin-left: 1.875rem;
+        }
+
+/* ----------------------------------------
+    2. Layout
+---------------------------------------- */
+
+    /* ----------------------------------------
+        Preloader
+    ---------------------------------------- */
+
+        .mad-preloader-circle,
+        .mad-preloader {
+            position: fixed;
+            width: 260vw;
+            height: 260vw;
+            margin-left: -130vw;
+            margin-top: -130vw;
+            background-color: #fff;
+            z-index: 50;
+            border-radius: 50%;
+            -webkit-transition-property: -webkit-transform;
+                    transition-property: transform;
+            -webkit-transition-delay: 0ms;
+                    transition-delay: 0ms;
+            -webkit-transition-duration: 700ms;
+                    transition-duration: 700ms;
+            -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+                    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .mad-preloader-circle {
+            -webkit-transition-timing-function: linear;
+                    transition-timing-function: linear;
+        }
+
+        .mad-preloader {
+            left: 50%;
+            top: 50%;
+        }
+
+        .mad-preloader-circle, .mad-preloader.mad-preloader--disappearing {
+            -webkit-transform: scale3d(0, 0, 0);
+                    transform: scale3d(0, 0, 0);
+        }
+
+        .mad-preloader-circle--appearing {
+            -webkit-transform: scale3d(1, 1, 1);
+                    transform: scale3d(1, 1, 1);
+        }
+
+    /* ----------------------------------------
+        Critical full screen message
+    ---------------------------------------- */
+
+        .mad-body--has-critical-fullscreen-message {
+            overflow: hidden !important;
+        }
+
+        .mad-fullscreen-message {
+            position: fixed;
+            z-index: 49;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            font-family: 'Arial', serif;
+            font-size: 1.875rem;
+            line-height: 2.34375rem;
+            color: #313131;
+            background-color: #fff;
+            padding: 2rem;
+            overflow: auto;
+        }
+
+        .mad-fullscreen-message .mad-aligner-inner {
+            vertical-align: middle;
+        }
+
+        .mad-fullscreen-message-before {
+            font-size: 3.25rem;
+            line-height: 4rem;
+        }
+
+        .mad-fullscreen-message-before:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .mad-fullscreen-message-before:empty,
+        .mad-fullscreen-message-after:empty {
+            display: none;
+        }
+
+    /* ----------------------------------------
+        Header
+    ---------------------------------------- */
+
+        .mad-header {
+            position: relative;
+            z-index: 25;
+        }
+
+        [class*="mad-header-section--sticky"].mad-header-section--sticked {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+        }
+
+        /* ----------------------------------------
+            Header Section
+        ---------------------------------------- */
+
+            .mad-header-section {
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem 3rem;
+                background: #363c42;
+                color: #fff;
+            }
+
+            .mad-header-section > .mad-header-col {
+                display: flex;
+                align-items: center;
+            }
+
+        /* ----------------------------------------
+            Header Items
+        ---------------------------------------- */
+
+            .mad-header-items {
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .mad-header-items > *:not(:last-child) {
+                margin-right: 161px;
+            }
+
+            .mad-header-items > .mad-logo:not(:last-child) {
+                margin-right: 171px;
+            }
+
+            .mad-header-item .mad-navigation-container {
+                padding: 0 5rem;
+            }
+
+            .mad-header-buttons {
+                font-family: 'Hind', sans-serif;
+                display: flex;
+                align-items: center;
+                margin: 0 -1rem;
+            }
+
+            .mad-header-buttons > * {
+                margin: 0 1rem;
+            }
+
+            .mad-header .mad-search input {
+                background: #54595e;
+                color: #bfc1c3;
+                border-color: #686d71;
+            }
+
+            .mad-media {
+                position: relative;
+                min-height: 385px;
+            }
+
+            .mad-media-btns {
+                position: absolute;
+                right: 3rem;
+                display: flex;
+                bottom: 2rem;
+                margin: 0 -3.5px;
+            }
+
+            .mad-media-btns > * {
+                margin: 0 3.5px;
+            }
+
+            .mad-media-btns button {
+                background: #e1e2e3;
+                color: #191c1f;
+                line-height: 2rem;
+                padding: 0 1.5rem;
+                font-size: 0.9286rem;
+                border-radius: 1rem;
+                position: relative;
+                white-space: nowrap;
+            }
+
+            .mad-media-btns > * .mad-dropdown-element.top-drop {
+                width: auto;
+                margin-bottom: 1.5rem;
+            }
+
+            .mad-media-btns button[aria-expanded="true"] {
+                background: #54595e;
+                color: #fff;
+            }
+
+            .mad-media-btns button i {
+                margin-right: 3px;
+            }
+
+        /* ----------------------------------------
+            Navigation
+        ---------------------------------------- */
+
+            .mad-navigation {
+                letter-spacing: 0.1px;
+                z-index: 4;
+                text-align: initial;
+            }
+
+            .mad-navigation > li {
+                position: relative;
+                display: inline-block;
+                font-size: 1.1429rem;
+            }
+
+            .mad-navigation > li:not(:last-child) {
+                margin-right: 3rem;
+            }
+
+            .mad-navigation > li.menu-item.current:after {
+                content: '';
+                position: absolute;
+                top: -27px;
+                left: -21px;
+                right: -21px;
+                background: #ff8066;
+                height: 3px;
+            }
+
+            .mad-navigation > li > a {
+                color: #fff;
+                letter-spacing: 0.3px;
+                -webkit-transition-property: background-color;
+                        transition-property: background-color;
+                -webkit-transition-delay: 0ms;
+                        transition-delay: 0ms;
+                -webkit-transition-duration: 500ms;
+                        transition-duration: 500ms;
+                -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+                        transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+                display: block;
+                position: relative;
+            }
+
+            .mad-navigation > li.menu-item-has-children > a:after {
+                content: 'keyboard_arrow_down';
+                margin-left: 0.5rem;
+                vertical-align: middle;
+                display: inline-block;
+                font-family: 'Material Icons';
+            }
+
+            .mad-navigation .menu-item-has-children:hover, .mad-navigation .menu-item-has-children.mad-seleceted, .mad-navigation .menu-item-has-children.mad-tapped {
+                z-index: 2;
+            }
+
+            .mad-no-touchevents .mad-navigation > li:hover > a::before,
+            .mad-no-touchevents .mad-navigation > .mad-seleceted > a::before,
+            .mad-touchevents .mad-navigation > .mad-tapped > a::before,
+            .mad-navigation > .current-menu-ancestor > a::before,
+            .mad-navigation > .current-menu-parent > a::before,
+            .mad-navigation > .current-menu-item > a::before {
+                opacity: 1;
+            }
+
+            .mad-mobile-nav-btn {
+                background-color: #232831;
+            }
+
+            .top-menu-btn {
+                font-size: 21px;
+                display: none;
+            }
+
+            .mad-navigation .sub-menu {
+                min-width: 155px;
+                font-size: 0.9286rem;
+                padding-top: 0.7143rem;
+                padding-bottom: 0.7143rem;
+                letter-spacing: 0.3px;
+                line-height: 1.5rem;
+                position: absolute;
+                white-space: nowrap;
+                text-align: left;
+                top: 100%;
+                margin-top: 1rem;
+                right: -1.5rem;
+                opacity: 0;
+                visibility: hidden;
+                border-radius: 0.5rem;
+                background-color: #fff;
+                border: 1px solid #e7e8e9;
+                -webkit-transition-property: opacity, visibility;
+                        transition-property: opacity, visibility;
+                -webkit-transition-delay: 0ms;
+                        transition-delay: 0ms;
+                -webkit-transition-duration: 500ms;
+                        transition-duration: 500ms;
+                -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+                        transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+                -webkit-box-shadow: 0px 0px 30px 0px rgba(15, 27, 56, 0.1);
+                -moz-box-shadow:    0px 0px 30px 0px rgba(15, 27, 56, 0.1);
+                box-shadow:         0px 0px 30px 0px rgba(15, 27, 56, 0.1);
+            }
+
+            .mad-navigation .sub-menu:before {
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                right: 21px;
+            
+                border-bottom: solid 9px #fff;
+                border-left: solid 8px transparent;
+                border-right: solid 8px transparent;
+            }
+
+            .mad-navigation .sub-menu a {
+                color: #2186c4;
+            }
+
+            .mad-navigation .sub-menu > li > a {
+                padding: 9px 1.5rem;
+                display: block;
+            }
+
+            .mad-navigation .sub-menu.mad-reverse {
+                left: auto;
+                right: -1.625rem;
+            }
+
+            .mad-navigation .sub-menu .sub-menu {
+                top: -0.4rem;
+                left: 100%;
+            }
+
+            .mad-navigation .sub-menu .sub-menu.mad-reverse {
+                left: auto;
+                right: 100%;
+            }
+
+            .mad-navigation .sub-menu .menu-item-has-children {
+                position: relative;
+                padding-right: 2.8rem;
+            }
+
+            .mad-navigation .sub-menu .menu-item-has-children::after {
+                font-family: Linearicons;
+                content: "\e93c";
+                position: absolute;
+                right: 0.9375rem;
+                font-size: 0.8125rem;
+                line-height: inherit;
+                top: 1rem;
+            }
+
+            .mad-no-touchevents .mad-navigation .sub-menu li:hover > a,
+            .mad-no-touchevents .mad-navigation .sub-menu .menu-item-has-children.mad-selected > a,
+            .mad-touchevents .mad-navigation .sub-menu .menu-item-has-children.mad-tapped > a,
+            .mad-navigation .sub-menu .current-menu-item > a,
+            .mad-navigation .sub-menu .current-menu-ancestor > a,
+            .mad-navigation .sub-menu .current-menu-parent > a {
+                background: #f2faff;
+            }
+
+            .mad-no-touchevents .menu-item-has-children:hover > .sub-menu,
+            .mad-no-touchevents .menu-item-has-children.mad-selected > .sub-menu,
+            .mad-touchevents .menu-item-has-children.mad-tapped > .sub-menu {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .mad-csstransforms3d .mad-navigation .sub-menu {
+                -webkit-transition-property: -webkit-transform, opacity, visibility;
+                        transition-property: transform, opacity, visibility;
+
+                -webkit-transform: scale3d(0.9, 0.9, 0.9);
+                        transform: scale3d(0.9, 0.9, 0.9);
+            }
+
+            .mad-csstransforms3d.mad-no-touchevents .menu-item-has-children:hover > .sub-menu,
+            .mad-csstransforms3d.mad-no-touchevents .menu-item-has-children.mad-selected > .sub-menu,
+            .mad-csstransforms3d.mad-touchevents .menu-item-has-children.mad-tapped > .sub-menu {
+                -webkit-transform: scale3d(1, 1, 1);
+                        transform: scale3d(1, 1, 1);
+            }
+
+            .mad-mobile-nav-btn {
+                width: 42px;
+                height: 42px;
+                font-size: 21px;
+                text-align: center;
+                line-height: 1;
+                border-radius: 7px;
+                color: #fff;
+                display: none;
+                background: #ff8066;
+            }
+
+            .mad-mobile-nav-btn::after {
+                font-family: 'Material Icons';
+                content: "menu";
+            }
+
+            .menu-close-btn {
+                display: none;
+            }
+
+            .mad-mobile-nav-btn.mad-opened {
+                background-color: #313131;
+            }
+
+            .mad-menu-holder {
+                position: relative;
+                padding: 15px 3rem;
+                background: #fff;
+                border-bottom: 1px solid #e7e8e9;
+            }
+
+            .mad-main-menu-container .mad-menu-items {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .mad-main-menu-container .mad-profile .mad-profile-photo {
+                border: 7px solid #fff;
+                border-radius: 50%;
+            }
+
+            .mad-main-menu-container .mad-profile .mad-profile-photo:after {
+                right: 5px;
+                width: 1rem;
+                height: 1rem;
+                border-width: 8px;
+            }
+
+            /* firefox only */
+            @-moz-document url-prefix() {
+                .mad-menu-items .mad-profile .mad-profile-photo:after {
+                    bottom: 0.7143rem;
+                    right: 12px;
+                }
+            }
+
+            .mad-profile .mad-profile-photo.offline:after {
+                background: #b2b5b8;
+            }
+
+            .mad-main-menu-container .mad-profile {
+                align-items: flex-end;
+                position: absolute;
+                left: 42px;
+                bottom: 21px;
+            }
+
+            .mad-main-menu-container .mad-profile .mad-profile-name {
+                font-size: 1.7143rem;
+                font-weight: bold;
+                padding-left: 3rem;
+                color: #fff;
+                margin-bottom: 1rem;
+            }
+
+            .mad-main-menu-container .mad-profile.style-2 .mad-profile-name:before {
+                font-size: 16px;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                top: -4px;
+                background: #1f2326;
+            }
+
+            .mad-menu-items .mad-post-buttons {
+                border-top: none;
+                margin-top: 0;
+                margin: 0 -12px;
+            }
+
+            .mad-menu-items .mad-post-buttons > *:not(:last-child),
+            .mad-menu-items .mad-post-buttons > * {
+                border: none;
+            }
+
+            .mad-menu-items .mad-post-buttons > * {
+                padding: 0 12px;
+                color: #8e9194;
+            }
+
+            .mad-menu-items .main-menu {
+                padding-right: 220px;
+                position: relative;
+                z-index: 9;
+            }
+
+            .main-menu ul {
+                display: flex;
+                margin: 0 -10.5px;
+            }
+
+            .main-menu ul > li {
+                padding: 0 10.5px;
+            }
+
+            .main-menu ul > li > a {
+                color: #2186c4;
+                letter-spacing: 0.3px;
+            }
+
+            .main-menu ul > li > a i {
+                display: block;
+                text-align: center;
+                margin-bottom: 0.5rem;
+                font-size: 1.2857rem;
+                line-height: 1.5rem;
+                display: none;
+            }
+
+            .main-menu ul > li.mad-current > a,
+            .main-menu ul > li:hover > a {
+                color: #191c1f;
+            }
+
+            .main-menu-btn {
+                display: none;
+                text-align: center;
+                background: #2186c4;
+                color: #fff;
+                border-radius: 7px;
+                font-size: 21px;
+                width: 3rem;
+                height: 3rem;
+                line-height: 3rem;
+            }
+
+    /* ----------------------------------------
+        Sections
+    ---------------------------------------- */
+
+        .mad-content {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .mad-section {
+            border: 1px solid #e7e8e9;
+            border-radius: 0.5rem;
+            background: #fff;
+            position: relative;
+        }
+
+        .mad-section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #e7e8e9;
+        }
+
+        .mad-section-header .mad-custom-select {
+            min-width: 300px;
+        }
+
+        .mad-section-header .mad-section-title {
+            font-size: 1.2857rem;
+            font-weight: bold;
+            color: #191c1f;
+            line-height: 1.5rem;
+        }
+
+        .mad-section-inner {
+            padding: 2rem;
+            /* display: flex;
+            flex-direction: column; */
+            position: relative;
+        }
+
+        .mad-section .mad-section-inner.small-type {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .mad-section .mad-section-inner.medium-type {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .mad-section .mad-section-inner.no-pb {
+            padding-bottom: 0;
+        }
+
+        .mad-section-inner.with-border:not(:last-child) {
+            border-bottom: 1px solid #e7e8e9;
+        }
+
+        .mad-section-inner .mad-inner-item {
+            margin: 0 -2rem;
+        }
+
+        .mad-section-inner .mad-inner-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: -1rem -0.5rem 0;
+        }
+
+        .mad-section-inner .mad-inner-row:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .mad-section-inner .mad-inner-row > * {
+            padding: 1rem 0.5rem 0;
+        }
+
+        .mad-section-inner .mad-title {
+            text-transform: uppercase;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: #4a4d4f;
+            font-weight: 600;
+        }
+
+        .mad-section-inner .mad-title:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .mad-section-inner .mad-sub {
+            color: #686d71;
+            line-height: 1.5rem;
+        }
+
+        .mad-section-inner .mad-sub:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+
+        .mad-label-wrap {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        .mad-section .mad-section-label {
+            position: absolute;
+            right: -42px;
+            top: 7px;
+            background: #ff8066;
+            color: #fff;
+            font-size: 0.9286rem;
+            letter-spacing: 0.3px;
+            line-height: 2rem;
+            padding: 0 42px;
+            transform: rotate(45deg);
+        }
+
+        .mad-section:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .mad-content.mad-content--no-pt {
+            padding-top: 0;
+        }
+
+        .mad-content.mad-content--no-pb {
+            padding-bottom: 0;
+        }
+
+        .mad-section--parallax {
+            background-size: auto;
+        }
+
+        .content-element:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+
+        .content-element-2:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .content-element-3:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        .content-element-4:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        .content-element-5:not(:last-child) {
+            margin-bottom: 2.5rem;
+        }
+
+        .content-element-6:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+
+        .content-element-7:not(:last-child) {
+            margin-bottom: 3.5rem;
+        }
+
+        .content-element-8:not(:last-child) {
+            margin-bottom: 4rem;
+        }
+
+    /* ----------------------------------------
+        Sidebar
+    ---------------------------------------- */
+
+        /* ----------------------------------------
+            Widgets
+        ---------------------------------------- */
+
+            .mad-sidebar .mad-widget {
+                background: #fff;
+                border: 1px solid #e7e8e9;
+                border-radius: 0.5rem;
+                overflow: hidden;
+            }
+
+            .mad-sidebar .mad-widget:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+
+            .mad-sidebar .mad-widget .mad-widget-inner {
+                padding: 2rem;
+            }
+
+            .mad-sidebar .mad-widget .mad-widget-title {
+                border-bottom: 1px solid #e7e8e9;
+                padding: 1.5rem 2rem;
+                letter-spacing: -0.1px;
+                font-weight: bold;
+            }
+
+            .mad-widget-title {
+                font-size: 1.2857rem;
+            }
+
+            .mad-sidebar .mad-widget .mad-widget-title:not(:last-child) {
+                margin-bottom: 0;
+            }
+
+            /* ----------------------------------------
+                Tags
+            ---------------------------------------- */
+
+                .tagcloud  {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    margin: -0.25rem;
+                }
+
+                .tagcloud > a {
+                    font-size: 1.2143rem;
+                    line-height: 2.5rem;
+                    letter-spacing: 0.3px;
+                    background: #bee6fd;
+                    color: #191c1f;
+                    padding: 0 1rem;
+                    margin: 0.25rem;
+                    border-radius: 21px;
+                }
+
+                .tagcloud > a:hover {
+                    background: #7ecefc;
+                }
+
+                .tagcloud > a.tag-small {
+                    font-size: 0.9286rem;
+                    line-height: 2rem;
+                }
+
+                .tagcloud > a.tag-medium {
+                    font-size: 1.0714rem;
+                }
+
+            /* ----------------------------------------
+                Profile
+            ---------------------------------------- */
+
+                .mad-sidebar .mad-widget .mad-profile,
+                .mad-dropdown-element.top-drop .mad-profile {
+                    padding: 0 2rem;
+                    margin-top: -2rem;
+                }
+
+                .mad-sidebar .mad-widget .mad-profile .mad-profile-name,
+                .mad-dropdown-element.top-drop .mad-profile .mad-profile-name {
+                    padding-bottom: 10px;
+                }
+
+                .mad-profile-img {
+                    position: relative;
+                }
+
+                .mad-profile-img img {
+                    width: 100%;
+                }
+
+                .mad-profile-img .mad-profile-actions {
+                    position: absolute;
+                    right: 1.5rem;
+                    bottom: 0.5rem;
+                    color: #fff;
+                }
+
+                .mad-profile-section {
+                    padding-bottom: 1rem;
+                }
+                
+                .mad-progress-bars:not(:last-child) {
+                    padding: 1rem 2rem;
+                    padding-bottom: 2rem;
+                }
+
+                .mad-progress-bars:first-child {
+                    padding-top: 2rem;
+                }
+
+                .mad-profile-section .mad-profile-title {
+                    text-transform: uppercase;
+                    padding-left: 2rem;
+                    font-weight: 600;
+                }
+
+                .mad-profile-section .mad-vr-list:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+
+    /* ----------------------------------------
+        Footer
+    ---------------------------------------- */
+
+        .mad-footer {
+            color: #bfc1c3;
+            background: #262a2e;
+        }
+
+        .mad-footer .mad-footer-main {
+            padding: 4.5rem 0;
+        }
+
+        .mad-footer address {
+            font-style: normal;
+        }
+
+        .mad-footer address:not(:last-child) {
+            margin-bottom: 0.8rem;
+        }
+
+        .mad-footer p {
+            line-height: 1.5rem;
+        }
+
+        .mad-footer .mad-icon-btn {
+            color: #313131;
+            font-size: 1.875rem;
+        }
+
+        .mad-footer .mad-widget {
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        .mad-footer .mad-widget-title {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .mad-footer .mad-widget-title:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        .mad-footer .mad-footer-bottom {
+            text-align: center;
+            color: #fff;
+            padding: 1.5rem 1rem;
+            background: #363c42;
+        }
+
+        .mad-footer .mad-footer-bottom span {
+            color: #fff;
+        }
+
+        .mad-footer .row:not(.col-no-space) {
+            margin-bottom: -3rem;
+        }
+
+        .mad-footer .row:not(.col-no-space) > [class*="col"] {
+            padding-bottom: 3rem;
+        }
+
+    /* ----------------------------------------
+        Grid
+    ---------------------------------------- */
+    
+        [class*="item-col-"]:not(.no-gutters){
+            margin: -2rem -1rem 0;
+        }
+
+        [class*="item-col-"]:not(.no-gutters) > *{
+            padding: 2rem 1rem 0;
+        }
+
+        .item-col {
+            width: 100%; 
+        }
+
+        .item-col-2 > *{
+            width: 50%;
+        }
+
+        .item-col-3 > *{
+            width: 33.3333%;
+        }
+
+        .item-col-4 > *{
+            width: 25%;
+        }
+
+        .item-col-5 > *{
+            width: 20%;
+        }
+
+        .item-col-6 > *{
+            width: 16.6666%;
+        }
+
+        .row:not(.col-no-space){
+            margin-bottom: -2rem;
+        }
+
+        .row:not(.col-no-space) > [class*="col"]{
+            padding-bottom: 2rem;
+        }
+
+    /* ----------------------------------------
+        Modals
+    ---------------------------------------- */
+
+        .mad-modal {
+            border-radius: 0.5rem;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            background: #fff;
+        }
+
+        .mad-modal .mad-gallery-modal {
+            display: flex;
+        }
+
+        .mad-modal .mad-gallery-modal .mad-col {
+            width: 76%;
+        }
+
+        .mad-modal .mad-gallery-modal .mad-col:last-child {
+            width: 24%;
+            min-width: 395px;
+        }
+
+        .mad-modal .mad-gallery-modal .owl-carousel {
+            margin-left: -1px;
+        }
+
+    /* ----------------------------------------
+        Arctic Modal
+    ---------------------------------------- */
+
+        .arcticmodal-container_i2 {
+            padding: 42px 7.1429rem;
+        }
+
+        .arcticmodal-container table {
+            background-color: transparent;
+            border: none;
+        }
+
+        .arcticmodal-container table tr {
+            border: none;
+            -webkit-transition: none;
+                    transition: none;
+        }
+
+        .arcticmodal-container table tr:hover {
+            background-color: transparent;
+        }
+
+        .arcticmodal-container .arcticmodal-close {
+            font-size: 2rem;
+            position: absolute;
+            z-index: 22;
+            top: 1rem;
+            right: 1rem;
+            color: #191c1f;
+        }
+
+    /* ----------------------------------------
+        Responsive Iframe
+    ---------------------------------------- */
+
+        .mad-responsive-iframe {
+            position: relative;
+            height: 0;
+            padding-bottom: 56%;
+        }
+
+        .mad-responsive-iframe > iframe {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mad-fullwidth-iframe > iframe {
+            width: 100%;
+        }
+
+    /* ----------------------------------------
+        Comments
+    ---------------------------------------- */
+
+        .comments-list {
+            overflow: hidden;
+        }
+
+        .comments-list > .comment:first-child {
+            margin-top: -2.4rem;
+        }
+
+        .comment {
+            font-size: 0.875rem;
+            line-height: 1.5rem;
+            padding-top: 2.4rem;
+        }
+
+        .comment .fn {
+            font-style: normal;
+            font-size: 1.125rem;
+            font-family: Playfair Display, serif;
+            margin-bottom: 0.7rem;
+            color: #313131;
+            display: block;
+        }
+
+        .comment-author-avatar {
+            float: left;
+            margin-right: 1.25rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .comment .children > li,
+        .comment.comment-has-children > .comment-body > .comment-author-info {
+            position: relative;
+        }
+
+        .comment.comment-has-children > .comment-body > .comment-author-info::after {
+            content: "";
+            border-width: 0 0 0 1px;
+            border-style: solid;
+            border-color: #dadada;
+            position: absolute;
+            left: 2.3rem;
+            top: 6.5rem;
+            height: calc(101% - 104px);
+        }
+
+        .comment-author-info {
+            padding-left: 6.125rem;
+        }
+
+        .comment-meta {
+            font-size: 0.6875rem;
+            line-height: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.82px;
+            margin-bottom: 0.9rem;
+            color: #b1b1b1;
+        }
+
+        .comment-content:not(:last-child) {
+            margin-bottom: 0.1rem;
+        }
+
+        .comment-actions {
+            font-size: 0.6875rem;
+            line-height: 1.75rem;
+            text-transform: uppercase;
+            color: #b1b1b1;
+            letter-spacing: 0.82px;
+            margin-left: -0.5rem;
+            margin-right: -0.5rem;
+        }
+
+        .comment-actions > a {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .comment::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .comment .children {
+            padding-left: 6.25rem;
+            overflow: hidden;
+        }
+
+        .comment .children > li::before {
+            content: "";
+            border-width: 0 0 1px 1px;
+            border-style: solid;
+            border-color: #dadada;
+            width: 2.3125rem;
+            height: 10091px;
+            position: absolute;
+            left: -3.9375rem;
+            top: -10016px;
+        }
+
+/* ----------------------------------------
+    3. Components
+---------------------------------------- */
+
+    /* ----------------------------------------
+        Alert Boxes
+    ---------------------------------------- */
+
+        .mad-alert {
+            color: #8e9194;
+            font-size: 0.8571rem;
+            line-height: 1rem;
+            margin-top: 1rem;
+            display: block;
+        }
+
+        .mad-alert i {
+            font-size: 1rem;
+            margin-right: 0.2143rem;
+        }
+
+        .mad-warning {
+            color: #e63f3f;
+        }
+
+        .mad-info {
+            color: #3f82e6;
+        }
+
+        .mad-form-col input + .mad-alert {
+            margin-top: -0.5rem;
+        }
+
+    /* ----------------------------------------
+        Lists
+    ---------------------------------------- */
+
+        /* ----------------------------------------
+            Icon List
+        ---------------------------------------- */
+
+        .mad-vr-list.with-icons > li > a {
+            position: relative;
+            padding-left: 3rem;
+            white-space: nowrap;
+        }
+
+        .mad-vr-list.with-icons > li > a i {
+            position: absolute;
+            top: 0;
+            line-height: 2.5rem;
+            left: 1.4286rem;
+            font-size: 16px;
+        }
+
+        .mad-vr-list.with-icons.type-2 > li > a {
+            padding-left: 4rem;
+        }
+
+        .mad-vr-list.with-icons.type-2 > li > a i {
+            left: 2rem;
+            line-height: 3rem;
+        }
+
+        /* ----------------------------------------
+            Vertical list
+        ---------------------------------------- */
+
+        .mad-vr-list > li > a {
+            line-height: 2.5rem;
+            white-space: nowrap;
+            padding: 0 1.5rem;
+            color: #2186c4;
+            display: block;
+        }
+
+        .mad-vr-list > li > a:hover {
+            background: #f2faff;
+        }
+
+        .mad-vr-list.type-2 > li > a {
+            padding: 0 2rem;
+            line-height: 3rem;
+        }
+
+    /* ----------------------------------------
+        Buttons
+    ---------------------------------------- */
+
+        .btn {
+            display: inline-block!important;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            padding: 0.25rem 2rem;
+            background: #2186c4;
+            color: #fff;
+            border-radius: 1.5rem;
+            letter-spacing: 0.3px;
+            font-weight: normal;
+            text-align: center;
+            font-weight: 600;
+            line-height: 2rem;
+            position: relative;
+            white-space: nowrap;
+            z-index: 1;
+        }
+
+        .btn:not([class*="btn-style-"]):hover {
+            background: #7ecefc;
+            color: #191c1f;
+        }
+
+        .btn i {
+            font-size: 18px;
+        }
+
+        .btn i:not(:only-child):first-child {
+            margin-right: 0.5rem;
+        }
+
+        .btn i:not(:only-child):last-child {
+            margin-left: 0.5rem;
+        }
+
+        .btn.btn-short {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .btn.btn-wide {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+
+        .btn.btn-small.btn-short {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .btn-small {
+            font-size: 0.9286rem;
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-right: 2rem;
+            padding-left: 2rem;
+        }
+
+        .btn-small i {
+            font-size: 1rem;
+        }
+
+        .btn-big {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .btn.btn-big.btn-icon {
+            padding-left: 0;
+            padding-right: 0;
+            min-width: 42px;
+        }
+
+        .btn-big i {
+            font-size: 20px;
+        }
+
+        [class*="btn"].btn-style-2 {
+            background: #eaebeb;
+            color: #191c1f;
+        }
+
+        [class*="btn"].btn-style-2:hover,
+        [class*="btn"].btn-style-2[aria-expanded="true"] {
+            background: #54595e;
+            color: #fff;
+        }
+
+        [class*="btn"].btn-style-3 {
+            background: #ff8066;
+        }
+
+        .btn.not-active {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .mad-btn-set {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: -0.25rem -0.25rem;
+        }
+
+        .mad-btn-set > * {
+            margin: 0.25rem 0.25rem;
+        }
+
+        .mad-back-to-top {
+            width: 56px;
+            height: 56px;
+            padding: 0;
+            text-align: center;
+            position: fixed;
+            border-radius: 50%;
+            z-index: 103;
+            right: 3%;
+            top: 60%;
+            color: #191c1f;
+            background: #eaebeb;
+        }
+
+        .mad-back-to-top .icon {
+            font-size: 2rem;
+            line-height: 3.5rem;
+        }
+
+        .mad-post-buttons {
+            display: flex;
+        }
+
+        .mad-section > .mad-post-buttons {
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+
+        .mad-section > .mad-post-buttons > * {
+            padding: 0 4rem;
+        }
+
+        .mad-post-buttons > * {
+            padding: 0 1rem;
+            white-space: nowrap;
+            line-height: 2.8571rem;
+            font-size: 0.9286rem;
+            flex: auto;
+            text-align: center;
+            flex: 1;
+        }
+
+        .mad-section-inner .mad-inner-item.mad-post-buttons {
+            border-top: 1px solid #e7e8e9;
+        }
+
+        .mad-post-buttons > a:hover {
+            background: #f2faff;
+        }
+
+        .mad-post-buttons > *:not(:last-child) {
+            border-right: 1px solid #e7e8e9;
+        }
+
+        .mad-post-buttons > * i {
+            font-size: 16px;
+        }
+
+        .mad-post-buttons > *:not(.mad-icon-btn) i {
+            margin-right: 0.5rem;
+        }
+
+        .mad-post-buttons > .mad-icon-btn {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        .mad-post-buttons > .mad-icon-btn.hash {
+            font-weight: 900;
+            font-style: italic;
+            font-size: 16px;
+        }
+
+        .mad-page-nav {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+    /* ----------------------------------------
+        Tabs & Tour Sections
+    ---------------------------------------- */
+
+        .mad-tabs:not(.mad-tabs--unstyled) {
+            /* overflow: hidden; */
+            color: #4a4d4f;
+        }
+
+        .mad-tabs:not(.mad-tabs--unstyled) .mad-tabs-nav {
+            font-weight: normal;
+            display: flex;
+
+            -ms-word-break: break-all;
+                word-break: break-all;
+
+            -webkit-user-select: none;
+               -moz-user-select: none;
+                 -o-user-select: none;
+                -ms-user-select: none;
+                    user-select: none;
+        }
+
+        .mad-tabs.type-2 .mad-tabs-nav {
+            position: relative;
+            z-index: 1;
+        }
+
+        .mad-tabs.type-2 .mad-tabs-nav:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 1px;
+            width: 100%;
+            background: #e7e8e9;
+            left: 0;
+            z-index: -1;
+        }
+
+        .mad-tabs:not(.mad-tabs--unstyled) .mad-tabs-nav > span {
+            flex: 1;
+            text-align: center;
+        }
+
+        .mad-tabs.type-2:not(.mad-tabs--unstyled) .mad-tabs-nav > span {
+            flex: inherit;
+        }
+
+        .mad-tabs:not(.mad-tabs--unstyled) .mad-tabs-nav > span:not(:last-child) a {
+            border-right: 1px solid #e7e8e9;
+        }
+
+        .mad-tabs.type-2:not(.mad-tabs--unstyled) .mad-tabs-nav > span a {
+            border-right: 1px solid #e7e8e9;
+        }
+
+        .mad-tabs:not(.mad-tabs--unstyled) .mad-tabs-nav a:not(.btn) {
+            color: #2186c4;
+            display: block;
+            font-size: 18px;
+            padding: 0 2rem;
+            white-space: nowrap;
+            line-height: 62px;
+            border-bottom: 1px solid #e7e8e9;
+        }
+
+        .mad-tabs:not(.mad-tabs--unstyled) .mad-tabs-nav > span.mad-active a {
+            border-bottom-color: #fff;
+            color: #191c1f;
+            font-weight: bold;
+        }
+
+        .mad-tabs.type-2 .mad-tabs-nav > .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 2rem;
+        }
+
+        .mad-tab p {
+            line-height: 1.5rem;
+        }
+        
+        .mad-tab .mad-profile .mad-profile-info {
+            padding-top: 0;
+        }
+
+        .mad-tabs.size-2:not(.mad-tabs--unstyled) .mad-tabs-nav a:not(.btn) {
+            font-size: 16px;
+            line-height: 3.5rem;
+        }
+
+    /* ----------------------------------------
+        Pagination
+    ---------------------------------------- */
+
+    /* ----------------------------------------
+        Progress Bars
+    ---------------------------------------- */
+
+        .mad-progress-bars-item:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        .mad-progress-bar {
+            height: 5px;
+            position: relative;
+            background-color: #f5f6f6;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .mad-progress-bar-title {
+            font-size: 0.9286rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            display: block;
+            position: relative;
+            line-height: 1.5rem;
+            color: #8e9194;
+        }
+
+        .mad-progress-bar-indicator {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: auto;
+            border-radius: 1rem;
+            background: #ff8066;
+        }
+
+        .mad-progress-bars--style-2 .mad-progress-bars-item:not(:last-child) {
+            margin-bottom: 1.1rem;
+        }
+
+        .mad-progress-bars--style-2 .mad-progress-bar {
+            height: 3px;
+        }
+
+        .mad-progress-bars--style-2 .mad-progress-bar-title {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 0.35rem;
+        }
+        
+        .mad-progress-bars.large-type .mad-progress-bar {
+            height: 0.7143rem;
+        }
+
+        .mad-progress-bars.large-type .mad-progress-bar-title {
+            font-size: 1rem;
+        }
+
+    /* ----------------------------------------
+        Team Members
+    ---------------------------------------- */
+
+        .mad-team-member {
+            text-align: center;
+        }
+
+        .mad-team-member-photo {
+            display: block;
+            overflow: hidden;
+        }
+
+        .mad-team-member-photo:not(:last-child) {
+            margin-bottom: 1.4rem;
+        }
+
+        .mad-team-member-name {
+            font-family: "Playfair Display", serif;
+            font-size: 1.5rem;
+            line-height: 1.875rem;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        .mad-team-member-name:not(:last-child) {
+            margin-bottom: 0.75rem;
+        }
+
+        .mad-team-member-name a:not(.mad-ln--independent):not(.mad-btn) {
+            color: #313131;
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, #313131), to(#313131));
+            background-image: linear-gradient(to bottom, #313131 100%, #313131 100%);
+        }
+
+        .mad-team-member-position {
+            font-family: "Muli", sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.09375rem;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: 4.2px;
+            text-transform: uppercase;
+        }
+
+        .mad-csstransforms3d .mad-team-member-photo {
+            display: block;
+            overflow: hidden;
+        }
+
+        .mad-csstransforms3d .mad-team-member-photo img {
+            -webkit-transition: -webkit-transform .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    transition:         transform .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .mad-csstransforms3d .mad-team-member:hover .mad-team-member-photo img {
+            -webkit-transform: scale3d(1.05, 1.05, 1.05);
+                    transform: scale3d(1.05, 1.05, 1.05);
+        }
+
+    /* ----------------------------------------
+        Tables
+    ---------------------------------------- */
+
+        table {
+            table-layout: fixed;
+            border-collapse: collapse;
+            border-width: 0;
+            border-style: solid;
+            background-color: #fff;
+            border-radius: 0.5rem;
+            width: 100%;
+            margin-bottom: -1px;
+        }
+
+        table:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        table + .mad-table-label {
+            margin-top: -0.7rem;
+        }
+
+        table tr {
+            -webkit-transition-property: background-color;
+            transition-property: background-color;
+            -webkit-transition-delay: 0ms;
+                    transition-delay: 0ms;
+            -webkit-transition-duration: 500ms;
+                    transition-duration: 500ms;
+            -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+                    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+            border-width: 0;
+            border-style: solid;
+        }
+
+        table tr:hover, table tr:focus {
+            -webkit-transition-duration: 150ms;
+                    transition-duration: 150ms;
+        }
+
+        table td,
+        table th {
+            padding-top: 1rem;
+            padding-right: 28px;
+            padding-bottom: 1rem;
+            padding-left: 28px;
+            border-bottom: 1px solid #e7e8e9;
+        }
+
+        table th,
+        table tfoot {
+            font-weight: bold;
+            color: #4a4d4f;
+        }
+
+        .mad-table-label {
+            display: block;
+            color: #b1b1b1;
+        }
+
+        .mad-table-label:not(:last-child) {
+            margin-bottom: 1.75rem;
+        }
+
+        .mad-table--responsive-xxxl {
+            border-right-width: 0;
+            border-bottom-width: 0;
+            border-left-width: 0;
+        }
+
+        .mad-total,
+        table tfoot,
+        .mad-table--vertical tfoot th {
+            color: #ff8066;
+            font-weight: bold;
+        }
+
+        .mad-table--vertical th {
+            border-right: 1px solid #e7e8e9;
+        }
+
+        .mad-table--vertical th {
+            width: 33%;
+        }
+
+        .mad-table--responsive-xxxl thead,
+        .mad-table--responsive-xxxl th:empty,
+        .mad-table--responsive-xxxl td:empty {
+            display: none;
+        }
+
+        .mad-table--responsive-xxxl tr {
+            border-bottom-width: 1px;
+        }
+
+        .mad-table--responsive-xxxl th, .mad-table--responsive-xxxl td {
+            display: block;
+            border-top-width: 0;
+        }
+
+        .mad-table--responsive-xxxl th[data-cell-title],
+        .mad-table--responsive-xxxl td[data-cell-title] {
+            position: relative;
+            overflow: hidden;
+            padding-left: 55%;
+        }
+        .mad-table--responsive-xxxl th[data-cell-title]::before,
+        .mad-table--responsive-xxxl td[data-cell-title]::before {
+            content: attr(data-cell-title);
+            position: absolute;
+            width: 50%;
+            padding-top: inherit;
+            padding-right: inherit;
+            padding-bottom: inherit;
+            padding-left: 1.5625rem;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            top: 0;
+            left: 0;
+            -webkit-box-sizing: border-box;
+               -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+        }
+
+        .mad-table--responsive-xxxl th[data-cell-title]::after,
+        .mad-table--responsive-xxxl td[data-cell-title]::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            border-width: 0 1px 0 0;
+            border-style: inherit;
+            border-color: inherit;
+        }
+
+        .mad-table--responsive-xxxl > tr:last-child,
+        .mad-table--responsive-xxxl > thead:last-child > tr:last-child,
+        .mad-table--responsive-xxxl > tbody:last-child > tr:last-child,
+        .mad-table--responsive-xxxl > tfoot:last-child > tr:last-child {
+            border-bottom-width: 0;
+        }
+
+        .checkout-table table tr td {
+            font-weight: bold;
+        }
+
+        .checkout-table table tr td.mad-title {
+            font-size: 16px;
+        }
+
+        .checkout-table table tfoot tr td {
+            font-weight: 900;
+        }
+
+    /* ----------------------------------------
+        Entities
+    ---------------------------------------- */
+
+        .mad-entities {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .mad-entities[class*="item-col-"] .mad-entity {
+            padding: 2rem;
+            border-width: 1px 1px 0 0;
+            border-style: solid;
+            border-color: #e7e8e9;
+            margin-right: -1px;
+            margin-top: -1px;
+            height: 100%;
+        }
+
+        .mad-entity .mad-entity-media:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .mad-entity .mad-entity-media img {
+            width: 100%;
+        }
+
+        .mad-entity .mad-entity-title:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+
+        .mad-entity .mad-entity-title a {
+            line-height: 2rem;
+        }
+
+        .mad-entity .mad-entity-date {
+            color: #8e9194;
+            font-size: 0.8571rem;
+            line-height: 1rem;
+            display: block;
+        }
+        
+        .mad-entities.single .mad-entity .mad-entity-title {
+            font-size: 1.7143rem;
+        }
+
+        .mad-entities.single .mad-entity .mad-entity-media:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        .mad-entity .mad-entity-body:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        .mad-blockquote:not(:last-child) {
+            margin-bottom: 2.5rem;
+        }
+
+        .mad-blockquote:not(:first-child) {
+            margin-top: 2.5rem;
+        }
+
+        .mad-blockquote {
+            background: #ebf7fe;
+            font-weight: 900;
+            color: #4a4d4f;
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+        }
+
+        .mad-blockquote .mad-blockquote-author {
+            display: block;
+            font-weight: normal;
+            margin-top: 1rem;   
+        }
+
+        .mad-cat {
+            font-size: 13px;
+            color: #8e9194;
+        }
+
+    /* ----------------------------------------
+        Carousels
+    ---------------------------------------- */
+
+        .owl-carousel {
+            position: relative;
+        }
+
+        .owl-carousel .owl-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 42px;
+        }
+
+        .owl-carousel .owl-nav > button {
+            color: #fff!important;
+            font-size: 40px!important;
+        }
+
+    /* ----------------------------------------
+        Rating
+    ---------------------------------------- */
+
+        .mad-rating {
+            font-size: 1.5rem;
+            line-height: 1.25rem;
+            white-space: nowrap;
+            color: #ff8066;
+        }
+
+    /* ----------------------------------------
+        Author
+    ---------------------------------------- */
+
+        .mad-profile-actions {
+            display: flex;
+            align-items: center;
+            margin: 0 -1rem;
+        }
+
+        .mad-profile-actions > * {
+            margin: 0 1rem;
+            line-height: initial;
+            position: relative;
+        }
+
+        .mad-profile {
+            width: 100%;
+            position: relative;
+            display: flex;
+        }
+
+        .mad-section-inner .mad-profile:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        .mad-action-btn i {
+            font-size: 1.7143rem;
+        }
+
+        .mad-profile .mad-action-btn {
+            color: #fff;
+        }
+
+        .mad-action .mad-numb {
+            position: absolute;
+            top: 0;
+            right: -5px;
+            font-size: 0.7143rem;
+            background: #7ecefc;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            letter-spacing: -0.5px;
+            color: #191c1f;
+            text-align: center;
+            line-height: 17px;
+        }
+
+        .mad-profile:not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        .mad-profile .mad-profile-photo {
+            margin-right: 1.5rem;
+            position: relative;
+            min-width: 4rem;
+            height: 100%;
+        }
+
+        .mad-section-inner > .mad-profile .mad-profile-photo {
+            min-width: 5rem;
+        }
+
+        .mad-users .mad-user {
+            position: relative;
+        }
+
+        .mad-profile .mad-profile-photo:after,
+        .mad-users .mad-user:after {
+            content: '';
+            position: absolute;
+            right: -5px;
+            bottom: 7px;
+            width: 8px;
+            height: 8px;
+            background: #4fe63f;
+            border-radius: 50%;
+            border: 4px solid #3f464d;
+        }
+
+        .mad-profile .mad-profile-name {
+            color: #191c1f;
+            position: relative;
+            display: inline-block;
+            padding-left: 1.5714rem;
+            line-height: 1.5rem;
+            font-size: 1.1429rem;
+            white-space: nowrap;
+        }
+
+        .mad-header .mad-profile .mad-profile-name {
+            color: #fff;
+        }
+
+        .mad-profile .mad-profile-info {
+            width: 100%;
+            position: relative;
+            line-height: 1.5rem;
+            padding-top: 0.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .mad-profile .mad-profile-info .mad-rating {
+            position: absolute!important;
+            top: 0;
+            right: 0;
+            font-size: 14px;
+        }
+
+        .mad-prof-action {
+            position: absolute;
+            right: 0;
+            top: 7px;
+            font-size: 1rem;
+        }
+
+        .mad-prof-action.warning {
+            top: auto;
+            bottom: -4px;
+        }
+
+        .mad-profile .mad-profile-info span i {
+            color: #8e9194;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+        .mad-profile .mad-profile-info a:not(.btn) i {
+            padding-right: 3px;
+            padding-left: 3px;
+        }
+
+        .mad-profile-info .mad-profile-name + span img {
+            display: inline-block;
+            vertical-align: initial;
+        }
+
+        .mad-profile .mad-profile-name.mad-dropdown-title {
+            padding-right: 1.5714rem;
+        }
+
+        .mad-profile .mad-profile-name.mad-dropdown-title:hover {
+            text-decoration: underline;
+        }
+
+        .mad-profile .mad-profile-name:before,
+        .mad-profile .mad-profile-name:after {
+            position: absolute;
+            top: 0;
+        }
+
+        .mad-profile .mad-profile-name:before {
+            content: "favorite";
+            left: 0;
+            top: 3px;
+            font-family: "Material Icons";
+            font-size: 8px;
+            background: #202428;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            color: #ff8066;
+            line-height: 16px;
+        }
+
+        .mad-profile:not(.style-2) .mad-profile-name:after {
+            content: 'keyboard_arrow_down';
+            right: 0;
+            line-height: 1.5rem;
+            font-family: 'Material Icons';
+        }
+
+        .mad-profile-section .mad-profile.style-2 {
+            align-items: flex-end;
+        }
+        
+        .mad-sidebar .mad-profile.style-2 .mad-profile-photo,
+        .mad-dropdown .mad-profile.style-2 .mad-profile-photo {
+            border: 7px solid #fff;
+            border-radius: 50%;
+        }
+
+        .mad-profile.style-2 .mad-profile-name:before {
+            background: #f0f0f1;
+        }
+
+        .mad-profile .mad-profile-name.no-icon {
+            padding-left: 0;
+        }
+        
+        .mad-profile.align-items-center .mad-profile-info {
+            padding-top: 0;
+        }
+
+        .mad-profile .mad-profile-name.no-icon:before,
+        .mad-profile .mad-profile-photo.no-icon:after {
+            display: none;
+        }
+
+        .mad-profile.style-2 .mad-profile-photo:after,
+        .mad-users .mad-user:after {
+            border-color: #fff;
+        }
+
+        .mad-users .mad-user {
+            display: inline-block;
+        }
+
+        .mad-users .mad-user.offline:after {
+            background: #b2b5b8;
+        }
+
+        .mad-author-photo {
+            display: inline-block;
+            width: 6.5rem;
+            height: 6.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .mad-author-photo:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .mad-profile-actions .mad-dropdown-element {
+            right: -7px;
+            margin-top: 1rem;
+        }
+
+        .mad-messages.mad-dropdown-element {
+            min-width: 415px;
+            padding: 0;
+        }
+
+        .mad-messages-wrap {
+            max-height: 480px;
+            overflow: auto;
+            border-radius: 0.5rem;
+        }
+
+        .mad-messages .mad-message {
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e7e8e9;
+            transition: background .5s ease;
+        }
+
+        .mad-messages .mad-message:hover {
+            background: #fbfbfb;
+        }
+
+        .mad-messages .mad-message > * {
+            width: 100%;
+        }
+
+        .mad-message-photo {
+            max-width: 3rem;
+            margin-right: 1rem;
+        }
+
+        .mad-messages .mad-message .mad-message-info .mad-message-author {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .mad-messages .mad-message .mad-message-info span {
+            font-size: 11px;
+            color: #8e9194;
+        }
+
+        .mad-messages .mad-message .mad-message-info .btn {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .mad-message-box-footer {
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .mad-post-info {
+            display: flex;
+            align-items: center;
+            font-size: 0.7857rem;
+            color: #76787a;
+            line-height: 1rem;
+            padding-top: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .mad-post-info:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .mad-profile p {
+            color: #4a4d4f;
+        }
+
+        .mad-profile-info  .mad-profile-name.mad-dropdown-title {
+            color: #2186c4;
+            font-weight: bold;
+            padding-right: 0;
+        }
+
+        .mad-post-info i {
+            color: #2186c4;
+            font-size: 0.7857rem;
+        }
+
+        .mad-time i {
+            padding-left: 7px;
+        }
+
+        .mad-profile-list > .mad-profile-item {
+            border-bottom: 1px solid #e7e8e9;
+            padding: 2rem;
+            width: 100%;
+        }
+
+        .mad-profile-list.mad-friends.no-pd > .mad-profile-item:last-child {
+            border-bottom: none;
+        }
+
+        .mad-section-inner .mad-profile-list .mad-profile:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        .mad-profile-list > .mad-profile-item .mad-profile.inner {
+            padding-left: 5.5rem;
+            padding-top: 1.5rem;
+        }
+
+        .mad-profile.inner .mad-profile-photo {
+            min-width: 3rem;
+        }
+
+        .mad-profile-list:not(.mad-friends) .mad-profile.style-2 .mad-profile-photo:after {
+            display: none;
+        }
+
+        .mad-meta > * {
+            margin-left: 0.5rem;
+        }
+
+        .mad-meta > * i {
+            font-size: 1rem;
+            margin-right: 3px;
+        }
+
+        .mad-write-comment {
+            display: flex;
+            padding: 1.5rem 2rem;
+        }
+
+        .mad-write-comment > img {
+            min-width: 42px;
+            margin-right: 14px;
+        }
+
+        .mad-write-comment > form {
+            width: 100%;
+            position: relative;
+        }
+
+        .mad-write-comment > form input {
+            padding-right: 6rem;
+        }
+
+        .mad-write-comment > form .mad-comment-btn {
+            position: absolute;
+            right: 21px;
+            top: 0;
+            margin: 0 -0.25rem;
+            line-height: 3rem
+        }
+
+        .mad-write-comment > form .mad-comment-btn > * {
+            margin: 0 0.25rem;
+            font-size: 18px;
+            color: #2186c4;
+            line-height: 12px;
+        }
+
+        .mad-write-comment > form .mad-comment-btn > .gif {
+            background: #2186c4;
+            color: #fff;
+        }
+
+        .mad-post-photo {
+            padding: 12px 0;
+        }
+
+        .mad-post-photo + .mad-post-info {
+            padding-top: 0;
+        }
+
+        .mad-profile-list.mad-friends {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 28px 0;
+            margin-right: -1px;
+        }
+
+        .mad-profile-list.mad-friends.full-width {
+            flex-direction: column;
+        }
+
+        .mad-profile-list.mad-friends.no-pd {
+            padding: 0;
+        }
+
+        .mad-profile-list.mad-friends .mad-profile-item {
+            width: 50%;
+            border-top: 1px solid #e7e8e9;
+            border-right: 1px solid #e7e8e9;
+            margin-top: -1px;
+            transition: all .5s ease;
+        }
+
+        .mad-profile-list.mad-friends.full-width .mad-profile-item {
+            width: 100%;
+        }
+
+        .mad-profile-list.mad-friends .mad-profile-item:hover {
+            background: #fbfbfb;
+        }
+
+        .mad-profile-list.mad-friends .mad-profile .mad-profile-photo {
+            min-width: 77px;
+        }
+
+        .mad-profile-list.mad-friends .mad-profile .mad-profile-name {
+            color: #2186c4;
+            font-weight: bold;
+        }
+
+        .mad-profile-list.mad-friends .mad-profile .mad-mf {
+            font-size: 12px;
+        }
+
+        .mad-profile-list.mad-friends .mad-profile .mad-profile-btns {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .mad-profile-list.mad-friends .mad-profile .mad-profile-btns .btn {
+            width: 2rem;
+            padding: 0;
+            text-align: center;
+        }
+
+        .mad-profile-list.mad-friends .mad-profile .mad-profile-btns .mad-dropdown-element {
+            margin-right: -16px;
+        }
+
+        .mad-profile-list.mad-friends .mad-profile .mad-profile-info {
+            padding-right: 0;
+            padding-top: 0;
+        }
+
+        .mad-profile-list.mad-friends .mad-profile .mad-profile-info .mad-btn-set {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .btn-toggle span:last-child,
+        .btn-toggle.active span:first-child {
+            display: none;
+        }
+
+        .btn-toggle.active span:last-child {
+            display: inline-block;
+        }
+
+        .btn-toggle.active {
+            background: #54595e;
+            color: #fff;
+        }
+
+        .mad-profile-list.mad-friends.mad-requests .mad-profile .mad-profile-info .mad-btn-set {
+            bottom: auto;
+            top: 0;
+            flex-direction: column;
+        }
+
+    /* ----------------------------------------
+        Forms
+    ---------------------------------------- */
+
+        input[type="text"], input[type="search"], input[type="date"], input[type="datetime-local"], input[type="email"], input[type="file"], input[type="month"], input[type="number"], input[type="password"], input[type="tel"], input[type="time"], input[type="url"], input[type="week"], textarea, .mad-custom-select .mad-selected-option, .select2-container--milenia .select2-selection {
+            border-style: solid;
+            border-width: 1px;
+            height: 3rem;
+            width: 100%;
+            padding-top: 0.5rem;
+            padding-right: 1.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            border-radius: 1.5rem;
+            color: #8e9194;
+            background-color: #fafafa;
+            border-color: #e7e8e9;
+        }
+
+        .mad-search {
+            position: relative;
+        }
+
+        .mad-search > button {
+            position: absolute;
+            left: 1.5rem;
+            top: 0;
+            line-height: 42px;
+            color: #fff;
+        }
+
+        .mad-search > button i {
+            line-height: inherit;
+            font-size: 1.7143rem;
+        }
+
+        .mad-search input {
+            padding-left: 3.5rem;
+            width: 430px;
+        }
+
+        .mad-ask-form {
+            position: relative;
+        }
+
+        .mad-ask-form textarea {
+            border: none;
+            padding: 1.5rem 2rem;
+            background: #fff;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom: 1px solid #e7e8e9;
+        }
+
+        .mad-ask-form .label {
+            position: absolute;
+            right: 1px;
+            top: 1px;
+            background: #f5f6f6;
+            font-size: 8px;
+            letter-spacing: 0.8px;
+            color: #191c1f;
+            line-height: 1rem;
+            padding: 0 0.3571rem;
+        }
+
+        .mad-login-popup {
+            position: absolute;
+            top: 0;
+            left: 14px;
+            right: 14px;
+            border-radius: 0.5rem;
+            border: 1px solid #e7e8e9;
+            padding: 2rem;
+            background: #fff;
+            z-index: 2;
+            display: none;
+        }
+
+        .mad-login-popup form input {
+            padding-right: 56px;
+        }
+
+        .mad-form-col {
+            position: relative;
+        }
+
+        .mad-form-col input:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .mad-form-col > i {
+            position: absolute;
+            right: 1.5rem;
+            top: 0;
+            font-size: 18px;
+            color: #b9bbbd;
+            line-height: 3rem;
+        }
+
+        .mad-form-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .mad-form-links {
+            font-size: 0.9286rem;
+            line-height: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .mad-line-form {
+            display: flex;
+        }
+
+        .mad-line-form + .mad-slide-content {
+            margin-top: 1.5rem;
+            display: none;
+        }
+
+        .mad-line-form .mad-btn-set {
+            flex-wrap: nowrap;
+        }
+
+        .mad-line-form input:not(:last-child) {
+            margin-right: 0.5rem;
+        }
+
+        form.small-size input {
+            height: 35px;
+            line-height: 35px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            font-size: 13px;
+        }
+
+        /* ----------------------------------------
+            Placeholder
+        ---------------------------------------- */
+
+            ::-webkit-input-placeholder {
+                color: inherit;
+                opacity: 1;
+            }
+
+            ::-webkit-textarea-placeholder {
+                color: inherit;
+                opacity: 1;
+            }
+
+            input::-moz-placeholder {
+                color: inherit;
+                opacity: 1;
+            }
+
+            textarea::-moz-placeholder {
+                color: inherit;
+                opacity: 1;
+            }
+
+            ::-ms-input-placeholder {
+                color: inherit;
+                opacity: 1;
+            }
+
+            ::-ms-textarea-placeholder {
+                color: inherit;
+                opacity: 1;
+            }
+
+        /* ----------------------------------------
+            Checkbox & Radio
+        ---------------------------------------- */
+
+            input[type="checkbox"],
+            input[type="radio"] {
+                display: none;
+            }
+
+            input[type="checkbox"] + label[for],
+            input[type="radio"] + label[for] {
+                display: block;
+                position: relative;
+                font-size: 1rem;
+                line-height: 2rem;
+                padding-left: 3rem;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -o-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                margin-bottom: 0;
+                min-height: 28px;
+                color: #686d71;
+            }
+
+            input[type="checkbox"] + label[for]::before,
+            input[type="radio"] + label[for]::before {
+                content: "";
+                border: 1px solid #ececec;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 10px;
+                position: absolute;
+                background: #fafafa;
+                left: 0;
+                top: 0;
+            }
+
+            input[type="checkbox"] + label[for]::after,
+            input[type="radio"] + label[for]::after {
+                font-family: 'Material Icons';
+                content: "check";
+                color: #686d71;
+                font-size: 18px;
+                line-height: 1;
+                position: absolute;
+                left: 1px;
+                width: 2rem;
+                text-align: center;
+                top: 0.4375rem;
+                display: none;
+            }
+
+            input[type="checkbox"] + label[for]:not(:last-child),
+            input[type="radio"] + label[for]:not(:last-child) {
+                margin-bottom: 0.8125rem;
+            }
+
+            input[type="checkbox"]:checked + label[for]::after,
+            input[type="radio"]:checked + label[for]::after {
+                display: block;
+            }
+
+            input[type="radio"][previousvalue="false"] + label[for]::after {
+                display: none;
+            }
+
+            input[type="radio"] + label[for]::after {
+                content: "";
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: #191c1f;
+                left: 0.5rem;
+                top: 0.5rem;
+            }
+
+            input[type="radio"] + label[for]::before {
+                border-radius: 10px;
+                width: 2rem;
+                height: 2rem;
+            }
+
+            .mad-hr-type {
+                display: flex;
+            }
+
+            .mad-hr-type .mad-form-col:not(:last-child) {
+                margin-bottom: 0;
+                margin-right: 42px;
+            }
+
+            .mad-hr-type input[type="radio"] + label[for] {
+                padding-left: 2.2rem;
+            }
+
+        /* ----------------------------------------
+            Select
+        ---------------------------------------- */
+
+            .mad-custom-select {
+                position: relative;
+            }
+
+            .mad-custom-select.mad-over {
+                z-index: 3;
+            }
+
+            .mad-custom-select .mad-selected-option {
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -o-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                height: 3rem;
+                line-height: 3rem;
+                position: relative;
+                padding-right: 3.5rem;
+                display: block;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                padding-top: 0;
+                padding-bottom: 0;
+                z-index: 2;
+            }
+
+            .mad-custom-select .mad-selected-option::after, .mad-custom-select .mad-selected-option::before {
+                content: "keyboard_arrow_down";
+                font-family: 'Material Icons';
+                font-size: 1.25rem;
+                line-height: inherit;
+                position: absolute;
+                top: 0;
+                right: 1rem;
+
+                -webkit-transition: opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1), visibility .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                        transition: opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1), visibility .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            .mad-custom-select .mad-selected-option::before {
+                content: "keyboard_arrow_up";
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .mad-custom-select .mad-options-list {
+                text-align: initial;
+                color: #8e9194;
+                background-color: #fafafa;
+                padding-bottom: 1rem;
+                border: 1px solid #e7e8e9;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                margin-top: -1.5rem;
+                padding-top: 1.5rem;
+                opacity: 0;
+                visibility: hidden;
+                border-bottom-right-radius: 1.5rem;
+                border-bottom-left-radius: 1.5rem;
+
+                -webkit-transition: opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1), visibility .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                        transition: opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1), visibility .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            .mad-custom-select .mad-options-list > li {
+                cursor: pointer;
+                padding-top: 1rem;
+                padding-right: 1.5625rem;
+                padding-left: 1.5625rem;
+
+                -webkit-transition: color .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                        transition: color .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            .mad-custom-select .mad-options-list > li:hover, .mad-custom-select .mad-options-list > li.mad-active {
+                color: #191c1f;
+            }
+
+            .mad-custom-select.mad-opened .mad-options-list,
+            .mad-custom-select.mad-opened .mad-selected-option::before {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .mad-custom-select.mad-opened .mad-selected-option::after {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .mad-csstransforms3d .mad-custom-select .mad-options-list,
+            .mad-csstransforms3d .mad-custom-select .mad-selected-option::after,
+            .mad-csstransforms3d .mad-custom-select .mad-selected-option::before {
+                -webkit-transition-property: -webkit-transform, opacity, visibility;
+                        transition-property:         transform, opacity, visibility;
+            }
+
+            .mad-csstransforms3d .mad-custom-select .mad-options-list {
+                -webkit-transform: scale3d(0.9, 0.9, 0.9);
+                        transform: scale3d(0.9, 0.9, 0.9);
+            }
+
+            .mad-csstransforms3d .mad-custom-select .mad-selected-option::before,
+            .mad-csstransforms3d .mad-custom-select.mad-opened .mad-selected-option::after {
+                -webkit-transform: scale3d(0, 0, 0);
+                        transform: scale3d(0, 0, 0);
+            }
+
+            .mad-csstransforms3d .mad-custom-select.mad-opened .mad-options-list,
+            .mad-csstransforms3d .mad-custom-select.mad-opened .mad-selected-option::before {
+                -webkit-transform: scale3d(1, 1, 1);
+                        transform: scale3d(1, 1, 1);
+            }
+
+            .mad-custom-select.size-2 .mad-selected-option {
+                line-height: 2.5rem;
+                height: 2.5rem;
+                font-size: 0.9286rem;
+            }
+
+            .mad-custom-select .mad-options-list > li {
+                font-size: 0.9286rem;
+                padding-top: 0.5rem;
+            }
+
+        /* ----------------------------------------
+            Label
+        ---------------------------------------- */
+
+            label {
+                display: block;
+                color: #8e9194;
+            }
+
+            label span {
+                color: #8e9194;
+            }
+
+            label[for] {
+                cursor: pointer;
+            }
+
+            label.req:after,
+            .req:after {
+                content: " * ";
+                color: #e63f3f;
+            }
+
+            label.with-bs:not(:last-child) {
+                margin-bottom: 0.5rem;
+            }
+
+        /* ----------------------------------------
+            Textarea
+        ---------------------------------------- */
+
+            textarea {
+                height: auto;
+                resize: none;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                display: block;
+            }
+
+        /* ----------------------------------------
+            Form groups
+        ---------------------------------------- */
+
+            .mad-login-popup .mad-form .mad-form-col:not(:last-child),
+            .mad-form.type-2 .mad-form-col:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            .mad-form-col:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+
+            .mad-form-btns {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 13px;
+                margin-top: 2rem;
+            }
+
+    /* ----------------------------------------
+        Gallery
+    ---------------------------------------- */
+        
+        .mad-media-gallery,
+        .mad-media-section {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .mad-media-gallery[class*="item-col-"]:not(.no-gutters),
+        .mad-gallery .row {
+            margin: -1rem -0.45rem 0;
+        }
+
+        .mad-gallery .row:not(.col-no-space) > [class*="col"] {
+            padding-bottom: 0;
+        }
+
+        .mad-media-gallery[class*="item-col-"]:not(.no-gutters) > *,
+        .mad-gallery .row > * {
+            padding: 1rem 0.45rem 0;
+            width: auto;
+        }
+
+        .video-gallery .mad-gallery-item {
+            position: relative;
+            display: block;
+        }
+
+        .video-gallery a.mad-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -18px;
+            margin-top: -18px;
+            background: url(../images/play_small.png) no-repeat;
+            display: block;
+            width: 36px;
+            height: 36px;
+            z-index: 2;
+        }
+
+        .video-gallery .mad-gallery-item:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #000;
+            opacity: 0.4;
+        }
+
+        .video-gallery a.mad-play.big-size {
+            margin-left: -34px;
+            margin-top: -34px;
+            background: url(../images/play.png) no-repeat;
+            display: block;
+            width: 68px;
+            height: 68px;
+        }
+
+        .mad-media-gallery + .mad-link {
+            margin-top: 1rem;
+        }
+
+        .mad-gallery .mad-gallery-item {
+            position: relative;
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .mad-gallery .mad-gallery-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #191c1f;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .5s ease;
+        }
+
+        .mad-gallery .mad-gallery-item:hover:before {
+            opacity: 0.4;
+            visibility: visible;
+        }
+
+        .mad-gallery .mad-gallery-item > span {
+            position: absolute;
+            color: #fff;
+            font-size: 2.1429rem;
+            font-weight: bold;
+            line-height: 1.5rem;
+            transition: all .5s ease;
+        }
+
+        .mad-media-section a {
+            overflow: hidden;
+            display: block;
+        }
+
+        .mad-media-section a img {
+            transition: all .5s ease;
+        }
+
+        .mad-media-section a:hover img {
+            transform: scale(1.1);
+        }
+
+        .mad-media-section .mad-media-item {
+            position: relative;
+        }
+
+        .mad-media-section .mad-media-item .mad-media-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: #bfc1c3;
+            padding: 1.5rem 2rem;
+            font-size: 11px;
+            background: -moz-linear-gradient(top, rgba(16,17,19,0.4) 0%, rgba(16,17,19,0.8) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(16,17,19,0.4) 0%,rgba(16,17,19,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, rgba(16,17,19,0.4) 0%,rgba(16,17,19,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        }
+
+        .mad-media-section .mad-media-item .mad-media-text span:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        .mad-media-section .mad-media-item .mad-media-text .mad-title a {
+            color: #fff;
+            font-weight: bold;
+            text-transform: none;
+            font-size: 1.1429rem;
+        }
+
+        .mad-media-section .mad-media-item .mad-media-text .mad-title:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+    /* ----------------------------------------
+        Products
+    ---------------------------------------- */
+
+        .mad-products:not(.owl-carousel):not(.mad-product-small) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: -1px;
+        }
+
+        .mad-products:not(.mad-product-small) .mad-product {
+            padding: 28px;
+            height: 100%;
+            border: 1px solid #e7e8e9;
+            position: relative;
+            transition: all .5s ease;
+            border-top: none;
+            border-left: none;
+            margin-right: -1.5px;
+        }
+
+        .mad-product-image {
+            position: relative;
+            background: none!important;
+            overflow: hidden;
+        }
+
+        .mad-product-image img {
+            width: 100%;
+        }
+
+        .mad-label {
+            font-family: 'Maven Pro', sans-serif;
+            position: absolute;
+            top: 5px;
+            left: -36px;
+            padding: 0 3rem;
+            background: #ff6666;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: .3px;
+            font-size: 0.8571rem;
+            color: #fff;
+            z-index: 3;
+            transform: rotate(-30deg);
+        }
+
+        .mad-label.new {
+            background: #82bbc9;
+        }
+
+        .mad-products:not(.mad-product-small) .mad-product .mad-product-description {
+            text-align: center;
+            padding-top: 1.5rem;
+        }
+
+        .product-description p {
+            color: #686d71;
+        }
+
+        .mad-product-title a {
+            color: #2186c4;
+            border-bottom: 1px solid transparent;
+        }
+
+        .mad-product .mad-product-title:hover a {
+            border-bottom-color: inherit;
+        }
+
+        .mad-product-description .mad-product-title {
+            font-size: 1.1429rem;
+            font-weight: bold;
+        }
+
+        .mad-products:not(.mad-product-small) .mad-product-description .mad-product-title {
+            line-height: 1.5rem;
+        }
+
+        .mad-products:not(.mad-product-small) .mad-product-description .mad-product-title:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+
+        .mad-product-description .mad-product-price,
+        .mad-product-single .mad-product-price {
+            font-size: 1rem;
+            color: #ff8066;
+            font-weight: bold;
+            display: block;
+        }
+
+        .mad-product-description .mad-product-price:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .mad-product-description .btn {
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .mad-product-price span,
+        .mad-product-single .mad-product-price span {
+            text-decoration: line-through;
+            padding-right: 3px;
+            font-weight: normal;
+            opacity: 0.7;
+        }
+
+        .mad-tabs.mad-shop .mad-tabs-holder {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .mad-tabs.mad-shop .mad-tabs-holder .mad-page-title:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        .mad-tabs.mad-shop:not(.mad-tabs--unstyled) .mad-tabs-nav > span:not(:last-child) {
+            margin-right: 2.1875rem;
+        }
+
+        .mad-tabs.mad-shop .mad-tabs-holder .mad-tabs-nav a {
+            padding: 0;
+            border: none;
+            font-size: 1rem;
+            font-weight: normal;
+            background: none;
+            text-transform: uppercase;
+            color: #999;
+            font-weight: 500;
+        }
+
+        .mad-tabs.mad-shop:not(.mad-tabs--unstyled):not(.mad-tabs--style-2) .mad-tabs-nav .mad-active > a {
+            background:none;
+            color: #d69080;
+            text-decoration: underline;
+        }
+
+        .mad-section-header.shop-sort {
+            font-size: 0.9286rem;
+            color: #8e9194;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .mad-section-header.shop-sort .mad-custom-select {
+            min-width: auto;
+        }
+
+        .mad-pagination {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -7px -3.5px 0;
+        }
+
+        .mad-pagination li {
+            padding: 7px 3.5px 0;
+        }
+
+        .mad-pagination li a {
+            display: block;
+            width: 35px;
+            line-height: 35px;
+            height: 35px;
+            text-align: center;
+            background: #2186c4;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 50%;
+        }
+
+        .mad-pagination li a:hover,
+        .mad-pagination li a.current {
+            background: #7ecefc;
+            color: #191c1f;
+        }
+
+        .mad-product-single .mad-page-title {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 2rem;
+        }
+
+        .mad-product-single .mad-page-title:not(:last-child) {
+            margin-bottom: 3px;
+        }
+
+        .mad-product-single .pricing-area {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 0.9286rem;
+        }
+
+        .mad-product-single .pricing-area:not(:last-child) {
+            margin-bottom: 5px;
+        }
+
+        .mad-product-single .pricing-area > *:not(:last-child) {
+            margin-right: 3px;
+        }
+
+        .mad-product-single .mad-product-price {
+            font-size: 16px;
+        }
+
+        .mad-product-single .mad-product-price:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .mad-product.mad-product-single .add-to-cart-form {
+            display: flex;
+            align-items: center;
+        }
+
+        .mad-product.mad-product-single .add-to-cart-form:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .mad-product.mad-product-single .add-to-cart-form .btn {
+            margin-left: 0.5rem;
+        }
+
+        .quantity,
+        .mad-product.mad-product-single .mad-custom-select {
+            width: 7rem;
+            position: relative;
+        }
+
+        .quantity input {
+            padding-right: 4rem;
+            line-height: 2.5rem;
+            height: 2.5rem;
+        }
+
+        .quantity button {
+            position: absolute;
+            right: 20px;
+            color: #333;
+            font-size: 1.25rem;
+        }
+
+        .quantity .qty-plus {
+            bottom: 9px;
+        }
+
+        .quantity .qty-minus {
+            top: 13px;
+        }
+
+        .mad-product.mad-product-single .product-meta {
+            font-size: 0.9286rem;
+            line-height: 2rem;
+            color: #686d71;
+        }
+
+        .mad-product.mad-product-single .product-meta li span {
+            color: #8e9194;
+        }
+
+        .mad-product.mad-product-single p {
+            line-height: 1.5rem;
+        }
+
+        /* Products small */
+
+        .mad-products.mad-product-small:not(.owl-carousel) {
+            display: block;
+        }
+
+        .mad-products.mad-product-small .mad-product {
+            display: flex;
+            position: relative;
+            z-index: 1;
+        }
+
+        .mad-products.mad-product-small .mad-product:before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            right: -28px;
+            top: -14px;
+            bottom: -14px;
+            background: transparent;
+            z-index: -1;
+            transition: all .5s ease;
+        }
+
+        aside .mad-products.mad-product-small .mad-product:hover:before {
+            background: #f0edea;
+        }
+
+        .mad-products.mad-product-small .mad-product .mad-product-description {
+            padding-left: 1rem;
+        }
+
+        .mad-products.mad-product-small .mad-product .mad-product-image {
+            min-width: 3rem;
+        }
+
+        .mad-products.mad-product-small .mad-product .mad-product-price {
+            font-size: 0.7857rem;
+            color: #686d71;
+            font-style: normal;
+        }
+
+        .mad-products.mad-product-small .mad-product .mad-product-description .mad-product-title {
+            letter-spacing: -0.5px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .shopping-cart .mad-products.mad-product-small .mad-product .mad-product-description .mad-product-title:hover {
+            text-decoration: underline;
+        }
+
+        .mad-products.mad-product-small .mad-product .mad-product-description .mad-product-title:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        /* Shopping cart */
+
+        .mad-dropdown-element.shopping-cart {
+            background: #fff;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            padding: 0;
+            text-align: left;
+            min-width: 21.875rem;
+        }
+
+        .shopping-cart .mad-close-item {
+            position: absolute;
+            right: 20px;
+            top: 2rem;
+            font-size: 1.125rem;
+            color: #191c1f;
+        }
+
+        .shopping-cart .sc-footer {
+            position: relative;
+            padding: 1.5rem;
+            font-weight: bold;
+            border-bottom: 1px solid #e7e8e9;
+            background: #fbfbfb;
+        }
+
+        .shopping-cart .mad-sc-footer {
+            padding: 1.5rem;
+        }
+
+        .shopping-cart .subtotal span {
+            font-family: 'Roboto', sans-serif;
+            color: #ff8066;
+        }
+
+        .shopping-cart .subtotal:not(:last-child) {
+            margin-bottom: 0.875rem;
+        }
+
+        .shopping-cart .mad-product {
+            padding: 1.5rem;
+            border-bottom: 1px solid #e7e8e9;
+        }
+
+        .shop-cart-form table tr th:first-child {
+            width: 44%;
+            padding-left: 90px;
+        }
+
+        .shop-cart-form table tr td {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .shop-cart-form .mad-product {
+            align-items: flex-start;
+        }
+
+        .shop-cart-form table tbody tr td {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            color: #686d71;
+            line-height: 1.5rem;
+        }
+
+        .shop-cart-form .mad-products.mad-product-small .mad-product .mad-product-description .mad-product-title {
+            font-size: 16px;
+        }
+
+        .shop-cart-form .mad-product .mad-close-item {
+            margin-right: 32px;
+            font-size: 1.125rem;
+        }
+
+        .shop-cart-form .mad-product .mad-close-item {
+            color: #191c1f;
+            width: 2rem;
+            height: 2rem;
+            background: #eaebeb;
+            text-align: center;
+            line-height: 2rem;
+            border-radius: 50%;
+        }
+
+        .mad-shop-footer {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .mad-shop-footer .mad-singlefield-form {
+            display: flex;
+        }
+
+        .mad-shop-footer .mad-singlefield-form input {
+            min-width: 220px;
+            margin-right: 7px;
+            line-height: 2.5rem;
+            height: 2.5rem;
+        }
+
+        .shop-cart-form .mad-shop-footer > * {
+            margin: 0;
+        }
+
+        .mad-checkout-form tr th:first-child {
+            width: 25%;
+            min-width: 18.75rem;
+        }
+
+        .mad-checkout-form .mad-product-title {
+            font-size: 1.125rem;
+            line-height: 1.875rem;
+            letter-spacing: -0.5px;
+            font-weight: 500;
+        }
+
+        .mad-checkout-form .checkout-title {
+            font-size: 1.125rem;
+        }
+
+        .mad-checkout-form .checkout-title strong {
+            font-weight: 600;
+        }
+
+        .mad-checkout-form tfoot,
+        .mad-checkout-form tfoot .checkout-title {
+            position: relative;
+            color: #ff8066!important;
+        }
+
+        .mad-checkout-form tfoot tr td {
+            background: none;
+        }
+
+        @-moz-document url-prefix() {
+            .mad-checkout-form tfoot:before {
+                top: 0;
+            }
+        }
+
+        .mad-checkout-form tfoot tr td:first-child {
+            border-bottom: none;
+        }
+
+        .payment-option:not(:last-child) {
+            margin-bottom: 1.875rem;
+        }
+
+        .payment-option li:not(:last-child){
+            margin-bottom: 0.9375rem;
+        }
+
+        .payment-option li:last-child {
+            padding-top: 15px;
+        }
+
+        .payment-option input[type="radio"] + label {
+            font-weight: bold;
+            color: #000;
+            font-size: 1.125rem;
+            display: inline-block;
+            margin-right: 3px;
+        }
+
+        .payment-option .mad-link {
+            line-height: 2.2857rem;
+        }
+
+        .payment-desc {
+            padding-left: 42px;
+        }
+
+        .payment-desc p {
+            color: #686d71;
+            font-size: 13px;
+            line-height: 1.5rem;
+        }
+
+        .input-wrapper:not(:last-child){
+            margin-bottom: 1rem;
+        }
+
+        .payment-option .input-wrapper:not(:last-child){
+            margin-bottom: 0;
+        }
+
+        .payment-option > li:last-child [class*="btn"]:only-child{
+            margin-top: 0.9375rem;
+        }
+
+    /* ----------------------------------------
+        Dropdown
+    ---------------------------------------- */
+
+        .mad-dropdown {
+            position: relative;
+            z-index: 1;
+        }
+
+        .mad-dropdown-title {
+            position: relative;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .mad-dropdown-element {
+            min-width: 155px;
+            font-size: 0.9286rem;
+            padding-top: 0.7143rem;
+            padding-bottom: 0.7143rem;
+            letter-spacing: 0.3px;
+            line-height: 1.5rem;
+            position: absolute;
+            top: 100%;
+            color: #4a4d4f;
+            line-height: 1.5rem;
+            margin-top: 1rem;
+            right: 0;
+            opacity: 0;
+            visibility: hidden;
+            border-radius: 0.5rem;
+            background-color: #fff;
+            border: 1px solid #e7e8e9;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            width: 100%;
+            -webkit-transition: opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1), visibility .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    transition: opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1), visibility .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .mad-dropdown-element p {
+            line-height: 1.5rem;
+        }
+
+        .mad-dropdown-element:before {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            right: 22px;
+            border-bottom: solid 8px #fff;
+            border-left: solid 7px transparent;
+            border-right: solid 7px transparent;
+            z-index: 2;
+        }
+
+        .mad-dropdown-element:after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            right: 21px;
+            border-bottom: solid 9px #e7e8e9;
+            border-left: solid 8px transparent;
+            border-right: solid 8px transparent;
+        }
+
+        .mad-dropdown-element > li {
+            padding-top: 1rem;
+            padding-right: 1.5625rem;
+            padding-left: 1.5625rem;
+        }
+
+        .mad-dropdown-element > li > a {
+            color: #313131;
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, #313131), to(#313131));
+            background-image: linear-gradient(to bottom, #313131 100%, #313131 100%);
+        }
+
+        .mad-dropdown-element--icons > li {
+            position: relative;
+            padding-left: 3.1rem;
+        }
+
+        .mad-dropdown-element--icons > li .fa,
+        .mad-dropdown-element--icons > li .fal,
+        .mad-dropdown-element--icons > li .far,
+        .mad-dropdown-element--icons > li .fab,
+        .mad-dropdown-element--icons > li .fas,
+        .mad-dropdown-element--icons > li .icon,
+        .mad-dropdown-element--icons > li [class*="mad-font-icon-"] {
+            position: absolute;
+            top: 1.3rem;
+            left: 1.5625rem;
+        }
+
+        .mad-dropdown-element--x-right {
+            left: auto;
+            right: 0;
+        }
+
+        .mad-dropdown--opened {
+            z-index: 6;
+        }
+
+        .mad-dropdown--opened .mad-dropdown-element {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mad-dropdown--title-icon .mad-dropdown-title {
+            position: relative;
+            padding-right: 0.875rem;
+        }
+
+        .mad-dropdown--title-icon .mad-dropdown-title .fa,
+        .mad-dropdown--title-icon .mad-dropdown-title .fal,
+        .mad-dropdown--title-icon .mad-dropdown-title .far,
+        .mad-dropdown--title-icon .mad-dropdown-title .fab,
+        .mad-dropdown--title-icon .mad-dropdown-title .fas,
+        .mad-dropdown--title-icon .mad-dropdown-title .icon,
+        .mad-dropdown--title-icon .mad-dropdown-title [class*="mad-font-icon-"] {
+            font-size: 0.8125rem;
+            line-height: 1;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -0.40625rem;
+        }
+
+        .mad-dropdown--title-icon .mad-dropdown-icon--state-default, .mad-dropdown--title-icon .mad-dropdown-icon--state-opened {
+            -webkit-transition: opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1), visibility .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    transition: opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1), visibility .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .mad-dropdown--title-icon .mad-dropdown-icon--state-opened,
+        .mad-dropdown--title-icon.mad-dropdown--opened .mad-dropdown-icon--state-default {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .mad-dropdown--title-icon.mad-dropdown--opened .mad-dropdown-icon--state-opened {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mad-dropdown-element.top-drop {
+            top: auto;
+            bottom: 100%;
+            right: auto;
+            left: 0;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+
+            -webkit-box-shadow: 0px 0px 14px 0px rgba(63, 70, 77, 0.16);
+            -moz-box-shadow:    0px 0px 14px 0px rgba(63, 70, 77, 0.16);
+            box-shadow:         0px 0px 14px 0px rgba(63, 70, 77, 0.16);
+        }
+
+        .mad-profile-info .mad-dropdown-element.top-drop {
+            padding: 0;
+            width: 21rem;
+        }
+
+        .mad-profile-info a:not(.btn):hover {
+            text-decoration: underline;
+        }
+
+        .mad-dropdown-element .mad-post-buttons {
+            border-top: 1px solid #e7e8e9;
+        }
+
+        .mad-dropdown-element .mad-post-buttons > * {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            color: #8e9194;
+        }
+
+        .mad-dropdown-element .mad-post-buttons > * i {
+            font-size: 1.1429rem;
+        }
+
+        .mad-dropdown-element.top-drop:before,
+        .mad-dropdown-element.top-drop:after {
+            bottom: auto;
+            top: 100%;
+            right: auto;
+            left: 21px;
+            transform: rotate(180deg);
+        }
+
+        .mad-dropdown-element.top-drop:after {
+            left: 20px;
+        }
+
+        .mad-csstransforms3d .mad-dropdown-element {
+            -webkit-transition-property: -webkit-transform, opacity, visibility;
+                    transition-property:         transform, opacity, visibility;
+            -webkit-transform: scale3d(0.9, 0.9, 0.9);
+                    transform: scale3d(0.9, 0.9, 0.9);
+        }
+
+        .mad-csstransforms3d .mad-dropdown--title-icon .mad-dropdown-icon--state-opened, .mad-csstransforms3d .mad-dropdown--title-icon .mad-dropdown-icon--state-default {
+            -webkit-transition-property: -webkit-transform, opacity, visibility;
+                    transition-property:         transform, opacity, visibility;
+        }
+
+        .mad-csstransforms3d .mad-dropdown--title-icon .mad-dropdown-icon--state-opened,
+        .mad-csstransforms3d .mad-dropdown--title-icon.mad-dropdown--opened .mad-dropdown-icon--state-default {
+            -webkit-transform: scale3d(0, 0, 0);
+                    transform: scale3d(0, 0, 0);
+        }
+
+        .mad-csstransforms3d .mad-dropdown--opened .mad-dropdown-element,
+        .mad-csstransforms3d .mad-dropdown--title-icon.mad-dropdown--opened .mad-dropdown-icon--state-opened {
+            -webkit-transform: scale3d(1, 1, 1);
+                    transform: scale3d(1, 1, 1);
+        }
+
+/* ----------------------------------------
+    4. Pages
+---------------------------------------- */
+
+    .mad-coupon p:not(.mad-text-small) {
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .mad-coupon p:not(.mad-text-small):not(:last-child) {
+        margin-bottom: 7px;
+    }
+
+    .mad-coupon form input {
+        max-width: 320px;
+    }
+
+    .mad-soc-activity {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-top: 1px solid #e7e8e9;
+        border-bottom: 1px solid #e7e8e9;
+        align-items: center;
+        font-size: 0.7857rem;
+        line-height: 1rem;
+        padding: 9px 2rem;
+    }
+
+    .mad-notifications .mad-notification-item {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .mad-notifications .mad-notification-item:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+
+    .mad-notification-item > button {
+        line-height: 2.5rem;
+        padding: 0 2rem;
+        font-size: 1rem;
+        white-space: nowrap;
+        background: #eaebeb;
+        color: #191c1f;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        width: 296px;
+    }
+
+    .mad-notification-item > button i {
+        margin-right: 0.5rem;
+        font-size: 16px;
+    }
+
+    .mad-notification-item > button.selected {
+        background: #2186c4;
+        color: #fff;
+    }
+
+    .mad-notification-item > button:first-child {
+        border-radius: 1.5rem 0 0 1.5rem;
+    }
+
+    .mad-notification-item > button:last-child {
+        border-radius: 0 1.5rem 1.5rem 0;
+    }
+
+    .mad-groups {
+        display: block;
+    }
+
+    .mad-groups .mad-group-item:not(:last-child) {
+        border-bottom: 1px solid #e7e8e9;
+    }
+
+    .mad-groups .mad-group-item {
+        padding: 2rem;
+        display: flex;
+    }
+
+    .mad-groups .mad-group-item > * {
+        flex: auto;
+    }
+
+    .mad-groups .mad-group-img {
+        max-width: 105px;
+        min-width: 105px;
+        margin-right: 1.5rem;
+    }
+
+    .mad-groups .mad-group-content {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        margin: -1rem -0.5rem 0;
+    }
+
+    .mad-groups .mad-group-content > * {
+        padding: 1rem 0.5rem 0;
+        width: 100%;
+    }
+
+    .mad-groups .mad-group-content .mad-group-info p {
+        font-size: 0.9286rem;
+        line-height: 1.5rem;
+    }
+
+    .mad-group-stat {
+        font-size: 11px;
+        line-height: 1rem;
+        color: #8e9194;
+    }
+
+    .mad-group-stat:not(:last-child) {
+        margin-bottom: 0.75rem;
+    }
+
+    .mad-group-stat > *:not(:last-child) {
+        margin-right: 0.5rem;
+    }
+
+    .mad-group-stat > * i {
+        margin-right: 0.25rem;
+    }
+
+    .mad-group-stat > * a:hover {
+        text-decoration: underline;
+    }
+
+    .mad-group-info .mad-title {
+        color: #2186c4;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .mad-group-info .mad-title:not(:last-child),
+    .mad-groups.mad-classfields .mad-price {
+        margin-bottom: 0.5rem;
+    }
+
+    .mad-groups:not(.mad-classfields) .mad-group-content .mad-btn-set {
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    .mad-groups.mad-classfields .mad-group-img {
+        max-width: 160px;
+        min-width: 160px;
+    }
+
+    .mad-groups.mad-classfields .mad-title {
+        font-size: 1.2857rem;
+    }
+
+    .mad-groups.mad-classfields .mad-price {
+        font-size: 16px;
+        color: #ff8066;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .mad-groups.mad-classfields .mad-group-content > * {
+        padding-top: 0;
+        width: auto;
+    }
+
+    .mad-groups.mad-classfields .mad-group-content .mad-group-info p {
+        font-size: 13px;
+        line-height: 1.5rem;
+    }
+
+    .mad-groups.mad-classfields .mad-group-item {
+        display: block;
+    }
+
+    .mad-groups.mad-classfields .mad-group-item > .mad-wrap {
+        display: flex;
+    }
+
+    .mad-groups.mad-classfields .mad-group-item > .mad-wrap:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+
+    .mad-groups.mad-classfields .mad-group-footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: -1rem;
+    }
+
+    .mad-groups.mad-classfields .mad-group-footer > * {
+        margin-top: 1rem;
+    }
+
+    .mad-groups.mad-classfields .mad-group-stat:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .mad-groups.mad-classfields .mad-btn-set {
+        flex-wrap: nowrap;
+    }
+
+    .mad-groups.mad-classfields .mad-btn-set > * {
+        width: 28px;
+        line-height: 28px;
+        padding: 0;
+    }
+
+    .mad-groups.mad-classfields .mad-group-content {
+        align-items: flex-start;
+    }
+
+    /* Splash Page */
+
+    .mad-splash-page .mad-page-wrapper,
+    .mad-splash-page,
+    .mad-splash-page body {
+        height: 100%;
+        min-height: 100%;
+    }
+
+    .mad-splash-page .mad-header .mad-splash-header-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mad-splash-page .mad-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 3rem;
+        font-size: 16px;
+    }
+
+    .mad-splash-page .mad-header .mad-splash-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -1.5rem;
+    }
+
+    .mad-splash-page .mad-header .mad-splash-menu ul li {
+        padding: 0 1.5rem;
+    }
+
+    .mad-splash-page .mad-splash-page-container {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .mad-splash-page .mad-splash-page-container > .mad-col {
+        width: 50%;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mad-splash-page-container .mad-col[data-bg-image-src] p {
+        font-size: 1.7143rem;
+        color: #fff;
+        line-height: 2.5rem;
+        font-weight: 300;
+    }
+
+    .mad-splash-page-container .mad-col[data-bg-image-src] p:not(:last-child) {
+        margin-bottom: 2.5rem;
+    }
+
+    .mad-splash-page-container .mad-col[data-bg-image-src] .mad-title {
+        color: #fff;
+        font-size: 4.2857rem;
+        font-weight: 800;
+        line-height: 5rem;
+        letter-spacing: 0.3px;
+    }
+
+    .mad-splash-page-container .mad-col[data-bg-image-src] .btn.btn-big {
+        font-size: 18px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-radius: 2rem;
+    }
+
+    .mad-splash-page-container .mad-col[data-bg-image-src] .mad-title:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    .mad-splash-page-container .mad-col[data-bg-image-src]:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #191c1f;
+        z-index: -1;
+        opacity: 0.65;
+    }
+
+    .mad-splash-page-container .mad-splash-inner {
+        padding: 2rem;
+        max-width: 610px;
+        width: 100%;
+    }
+
+    /* ----------------------------------------
+        Blog Single
+    ---------------------------------------- */
+
+
+    /* ----------------------------------------
+        404 Page
+    ---------------------------------------- */
+
+        .mad-404-content:not(:last-child) {
+            margin-bottom: 2.6rem;
+        }
+
+        .mad-404-title {
+            font-family: "Old Standard TT", serif;
+            font-size: 25rem;
+            line-height: 1;
+        }
+
+        .mad-404-title + * {
+            margin-top: -4rem;
+        }
+
+        .mad-404-message {
+            font-size: 1.125rem;
+            display: block;
+        }
+
+        .mad-404-message:not(:last-child) {
+            font-size: 1.125rem;
+            margin-bottom: 1.625rem;
+        }
+
+    /* ----------------------------------------
+        Coming Soon Page
+    ---------------------------------------- */
+
+        .mad-coming-soon-title:not(:last-child) {
+            margin-bottom: 2.15rem;
+        }
+
+        .mad-coming-soon-message {
+            font-size: 1.125rem;
+        }
+
+        .mad-coming-soon-message:not(:last-child) {
+            font-size: 1.125rem;
+            margin-bottom: 3.5rem;
+        }
+
+    /* ----------------------------------------
+        Home
+    ---------------------------------------- */
+
+        .mad-contact-info {
+            font-family: "Playfair Display", serif;
+            font-size: 2.25rem;
+            line-height: 3.2625rem;
+        }

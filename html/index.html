@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--================ Basic page needs ================-->
+  <title>Social Network | Home</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <!--================ Mobile specific metas ================-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--================ Favicon ================-->
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <!--================ Google web fonts ================-->
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+  <!--================ Vendor CSS ================-->
+  <link rel="stylesheet" href="css/fontawesome-all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp" rel="stylesheet">
+  <link rel="stylesheet" href="vendors/owl-carousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="vendors/arcticmodal/jquery.arcticmodal-0.3.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!--================ Theme CSS ================-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <!--================ Vendor JS ================-->
+</head>
+<body class="mad-body--scheme-brown">
+  <div class="mad-preloader"></div>
+  <div id="mad-page-wrapper" class="mad-page-wrapper">
+    <!--================ Header ================-->
+    <header id="mad-header" class="mad-header">
+      <!--================ Section ================-->
+      <div class="mad-header-section mad-header-section--sticky-xl">
+        <!--================ Column ================-->
+        <div class="mad-header-col">
+          <div class="mad-header-items">
+            <div class="mad-logo">
+              <a href="index.html"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div>
+              <!--================ Navigation ================-->
+              <nav class="mad-nav-container">
+                <button class="top-menu-btn"><i class="material-icons-outlined">menu</i></button>
+                <ul class="mad-navigation">
+                  <li><button class="menu-close-btn"><i class="material-icons">keyboard_arrow_right</i></button></li>
+                  <li class="menu-item menu-item-has-children current"><a href="#">Community</a>
+                    <!--================ Sub Menu ================-->
+                    <ul class="sub-menu">
+                      <li class="menu-item"><a href="stream.html">Profile</a>
+                      </li>
+                      <li class="menu-item"><a href="members.html">Members</a>
+                      </li>
+                      <li class="menu-item"><a href="groups.html">Groups</a>
+                      </li>
+                    </ul>
+                    <!--================ End of Sub Menu ================-->
+                  </li>
+                  <li class="menu-item"><a href="classifieds.html">Classifieds</a></li>
+                  <li class="menu-item"><a href="#">Config</a></li>
+                  <li class="menu-item menu-item-has-children"><a href="#">Shop</a>
+                    <!--================ Sub Menu ================-->
+                    <ul class="sub-menu">
+                      <li class="menu-item"><a href="shop_2_cols.html">2 Columns</a>
+                      </li>
+                      <li class="menu-item"><a href="shop_3_cols.html">3 Columns</a>
+                      </li>
+                      <li class="menu-item"><a href="shop_single.html">Single Product</a>
+                      </li>
+                      <li class="menu-item"><a href="shop_cart.html">Cart</a>
+                      </li>
+                      <li class="menu-item"><a href="../../index.html">Checkout</a>
+                      </li>
+                    </ul>
+                    <!--================ End of Sub Menu ================-->
+                  </li>
+                </ul>
+              </nav>
+              <!--================ End of Navigation ================-->
+            </div>
+            <div>
+              <form class="mad-search">
+                <input type="text" placeholder="Search">
+                <button type="submit" class="mad-search-button"><i class="material-icons-outlined">search</i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!--================ End of Column ================-->
+        <!--================ Column ================-->
+        <div class="mad-header-col">
+          <div class="mad-profile align-items-center">
+            <div class="mad-profile-photo"><img src="images/56x56_photo1.png" alt=""></div>
+            <div class="mad-dropdown">
+              <button type="button" class="mad-profile-name mad-dropdown-title">John Doe</button>
+              <div class="mad-dropdown-element">
+                <ul class="mad-vr-list with-icons">
+                  <li><a href="stream.html"><i class="material-icons-outlined">home</i>Stream</a></li>
+                  <li><a href="../../index.html"><i class="material-icons-outlined">account_circle</i>About</a></li>
+                  <li><a href="../../index.html"><i class="material-icons-outlined">library_books</i>Blog</a></li>
+                  <li><a href="classifieds.html"><i class="material-icons-outlined">ballot</i>Classifieds</a></li>
+                  <li><a href="../../index.html"><i class="material-icons-outlined">group</i>Friends</a></li>
+                  <li><a href="../../index.html"><i class="material-icons-outlined">group_work</i>Groups</a></li>
+                  <li><a href="../../index.html"><i class="material-icons-outlined">photo_library</i>Photos</a></li>
+                  <li><a href="#"><i class="material-icons-outlined">video_library</i>Audio & Video</a></li>
+                  <li><a href="#"><i class="material-icons-outlined">settings</i>Preferences</a></li>
+                  <li><a href="#"><i class="material-icons-outlined">meeting_room</i>Log Out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="mad-profile-actions">
+            <div class="mad-action mad-dropdown">
+              <button type="button" class="mad-action-btn mad-dropdown-title"><i class="material-icons-outlined">person_add</i><span class="mad-numb">2</span></button>
+              <!-- message box -->
+              <div class="mad-messages mad-dropdown-element">
+                <div class="mad-messages-wrap">
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo1.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <a href="#" class="mad-link">Andrew Simmons</a>
+                        <div class="mad-btn-set">
+                          <a href="#" class="btn btn-small btn-style-2">Ignore</a>
+                          <a href="#" class="btn btn-small btn-style-3">Approve</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo2.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <a href="#" class="mad-link">Romeo Caruthers</a>
+                        <div class="mad-btn-set">
+                          <a href="#" class="btn btn-small btn-style-2">Ignore</a>
+                          <a href="#" class="btn btn-small btn-style-3">Approve</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <div class="mad-message-box-footer">
+                    <a href="#" class="btn btn-small btn-style-2">View All</a>
+                  </div>
+                </div>
+              </div>
+              <!-- end of message box -->
+            </div>
+            <div class="mad-action mad-dropdown">
+              <button type="button" class="mad-action-btn mad-dropdown-title"><i class="material-icons-outlined">
+                mail_outline
+              </i><span class="mad-numb">5</span></button>
+              <!-- message box -->
+              <div class="mad-messages mad-dropdown-element">
+                <div class="mad-messages-wrap">
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo1.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <a href="#" class="mad-link">Andrew Simmons</a>
+                        <span>6 months ago</span>
+                      </div>
+                      <p>Hi, how are you this awesome day?</p>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo2.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <a href="#" class="mad-link">Romeo Caruthers</a>
+                        <span>6 months ago</span>
+                      </div>
+                      <p>I miss you!</p>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <div class="mad-message-box-footer">
+                    <a href="#" class="btn btn-small btn-style-2">View All</a>
+                  </div>
+                </div>
+              </div>
+              <!-- end of message box -->
+            </div>
+            <div class="mad-action mad-dropdown">
+              <button type="button" class="mad-action-btn mad-dropdown-title"><i class="material-icons-outlined">
+                notifications_none
+              </i><span class="mad-numb">13</span></button>
+              <!-- message box -->
+              <div class="mad-messages mad-dropdown-element">
+                <div class="mad-messages-wrap">
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo1.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <div>
+                          <a href="#" class="mad-link">Andrew Simmons</a> winked at your post
+                        </div>
+                      </div>
+                      <span>6 months ago</span>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo1.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <div>
+                          <a href="#" class="mad-link">Andrew Simmons</a> winked at your post
+                        </div>
+                      </div>
+                      <span>6 months ago</span>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo2.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <div>
+                          <a href="#" class="mad-link">Andrew Simmons</a> accepted your friend request
+                        </div>
+                      </div>
+                      <span>7 months ago</span>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo3.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <div>
+                          <a href="#" class="mad-link">Debbie Begaye</a> posted in I love dogs!
+                        </div>
+                      </div>
+                      <span>6 months ago</span>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo4.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <div>
+                          <a href="#" class="mad-link">William Torres</a> joined your group
+                        </div>
+                      </div>
+                      <span>7 months ago</span>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo5.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <div>
+                          <a href="#" class="mad-link">Anna Smith</a> accepted your friend request
+                        </div>
+                      </div>
+                      <span>7 months ago</span>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo1.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <div>
+                          <a href="#" class="mad-link">Andrew Simmons</a> winked at your post
+                        </div>
+                      </div>
+                      <span>6 months ago</span>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo1.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <div>
+                          <a href="#" class="mad-link">Andrew Simmons</a> winked at your post
+                        </div>
+                      </div>
+                      <span>6 months ago</span>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo2.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <div>
+                          <a href="#" class="mad-link">Andrew Simmons</a> accepted your friend request
+                        </div>
+                      </div>
+                      <span>7 months ago</span>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo3.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <div>
+                          <a href="#" class="mad-link">Debbie Begaye</a> posted in I love dogs!
+                        </div>
+                      </div>
+                      <span>6 months ago</span>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo4.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <div>
+                          <a href="#" class="mad-link">William Torres</a> joined your group
+                        </div>
+                      </div>
+                      <span>7 months ago</span>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <!-- message element -->
+                  <div class="mad-message">
+                    <div class="mad-message-photo"><img src="images/42x42_photo5.png" alt=""></div>
+                    <div class="mad-message-info">
+                      <div class="mad-message-author">
+                        <div>
+                          <a href="#" class="mad-link">Anna Smith</a> accepted your friend request
+                        </div>
+                      </div>
+                      <span>7 months ago</span>
+                    </div>
+                  </div>
+                  <!-- end of message element -->
+                  <div class="mad-message-box-footer">
+                    <a href="#" class="btn btn-small btn-style-2">View All</a>
+                  </div>
+                </div>
+              </div>
+              <!-- end of message box -->
+            </div>
+            <div class="mad-action mad-dropdown">
+              <button type="button" class="mad-action-btn mad-dropdown-title"><i class="material-icons-outlined">
+                shopping_cart
+              </i><span class="mad-numb">2</span></button>
+              <div class="shopping-cart mad-dropdown-element mad-dropdown-element--x-left">
+                <div class="mad-products mad-product-small">
+                  <div class="mad-col">
+                    <!-- Product -->
+                    <div class="mad-product">
+                      <button class="mad-close-item"><i class="material-icons-outlined">close</i></button>
+                      <a href="#" class="mad-product-image">
+                        <img src="images/42x42_product1.jpg" alt="">
+                      </a>
+                      <!-- product-info -->
+                      <div class="mad-product-description">
+                        <a href="#" class="mad-product-title">Ninja Silhouette</a>
+                        <span class="mad-product-price">1 × $20.00</span>
+                      </div>
+                      <!--/ product-info -->
+                    </div>
+                    <!-- End of Product -->
+                  </div>
+                  <div class="mad-col">
+                    <!-- Product -->
+                    <div class="mad-product">
+                      <button class="mad-close-item"><i class="material-icons-outlined">close</i></button>
+                      <a href="#" class="mad-product-image">
+                        <img src="images/42x42_product2.jpg" alt="">
+                      </a>
+                      <!-- product-info -->
+                      <div class="mad-product-description">
+                        <a href="#" class="mad-product-title">Patient Ninja</a>
+                        <span class="mad-product-price">1x$499.00</span>
+                      </div>
+                      <!--/ product-info -->
+                    </div>
+                    <!-- End of Product -->
+                  </div>
+                </div>
+                <div class="sc-footer">
+                  <div class="subtotal">Subtotal: <span class="total-price">$35.00</span></div>
+                </div>
+                <div class="mad-sc-footer">
+                  <div class="mad-btn-set">
+                    <a href="#" class="btn btn-small btn-style-2">View Cart</a>
+                    <a href="#" class="btn btn-small btn-style-3">Checkout</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--================ End of Column ================-->
+      </div>
+      <!--================ End of Section ================-->
+    </header>
+    <!--================ End of Header ================-->
+    <div class="mad-content">
+      <div class="container">
+        <div class="row">
+          <!-- Sidebar -->
+          <aside class="mad-sidebar col-lg-3">
+            <!-- login popup -->
+            <div class="mad-login-popup">
+              <form class="mad-form">
+                <div class="mad-form-col">
+                  <input type="text" placeholder="Login">
+                  <i class="material-icons-outlined">person_outline</i>
+                </div>
+                <div class="mad-form-col">
+                  <input type="text" placeholder="Password">
+                  <i class="material-icons-outlined">lock</i>
+                </div>
+                <div class="mad-form-col">
+                  <div style="display: block;" class="mad-toggled-fields">
+                    <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                    <label for="checkbox-1" class="mad-label-checkbox">Remember me</label>
+                  </div>
+                </div>
+                <div class="mad-form-footer">
+                  <a href="#" class="btn btn-short btn-big btn-style-3 mad-login">Login</a>
+                  <div class="mad-form-links">
+                    <a href="#" class="mad-link">Register</a>
+                    <a href="#" class="mad-link">Forgot Password</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- End of login popup -->
+            <!-- Widget -->
+            <div class="mad-widget">
+              <div class="mad-profile-section">
+                <div class="mad-profile-img">
+                  <img src="images/317x119_img1.jpg" alt="">
+                  <div class="mad-profile-actions">
+                    <div class="mad-action">
+                      <button type="button" class="mad-action-btn"><i class="material-icons-outlined">person_add</i><span
+                          class="mad-numb">2</span></button>
+                    </div>
+                    <div class="mad-action">
+                      <button type="button" class="mad-action-btn"><i class="material-icons-outlined">
+                          mail_outline
+                        </i><span class="mad-numb">5</span></button>
+                    </div>
+                    <div class="mad-action">
+                      <button type="button" class="mad-action-btn"><i class="material-icons-outlined">
+                          notifications_none
+                        </i><span class="mad-numb">13</span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="mad-profile style-2">
+                  <div class="mad-profile-photo"><img src="images/56x56_photo2.png" alt=""></div>
+                  <div class="mad-profile-name">John Doe</div>
+                </div>
+                <div class="mad-progress-bars">
+                  <div class="mad-progress-bars-item">
+                    <strong id="progress-bar-title-1" data-value="75" data-units="%" class="mad-progress-bar-title">Your profile is 50% complete</strong>
+                    <div role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                      aria-labelledby="progress-bar-title-1" class="mad-progress-bar">
+                      <div style="width: 75%" class="mad-progress-bar-indicator"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mad-profile-title">My Profile</div>
+                <ul class="mad-vr-list with-icons type-2 ">
+                  <li><a href="stream.html"><i class="material-icons-outlined">home</i>Stream</a></li>
+                  <li><a href="../../index.html"><i class="material-icons-outlined">account_circle</i>About</a></li>
+                  <li><a href="../../index.html"><i class="material-icons-outlined">library_books</i>Blog</a></li>
+                  <li><a href="classifieds.html"><i class="material-icons-outlined">ballot</i>Classifieds</a></li>
+                  <li><a href="../../index.html"><i class="material-icons-outlined">group</i>Friends</a></li>
+                  <li><a href="../../index.html"><i class="material-icons-outlined">group_work</i>Groups</a></li>
+                  <li><a href="../../index.html"><i class="material-icons-outlined">photo_library</i>Photos</a></li>
+                  <li><a href="../../index.html"><i class="material-icons-outlined">video_library</i>Audio &amp; Video</a></li>
+                  <li><a href="#"><i class="material-icons-outlined">settings</i>Preferences</a></li>
+                </ul>
+                <div class="mad-profile-title">Community</div>
+                <ul class="mad-vr-list with-icons type-2 ">
+                  <li><a href="index.html"><i class="material-icons-outlined">home</i>Activity</a></li>
+                  <li><a href="members.html"><i class="material-icons-outlined">group</i>Members</a></li>
+                  <li><a href="classifieds.html"><i class="material-icons-outlined">ballot</i>Classifieds</a></li>
+                  <li><a href="../../index.html"><i class="material-icons-outlined">group_work</i>Groups</a></li>
+                  <li><a href="#"><i class="material-icons-outlined">meeting_room</i>Log Out</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- End of Widget -->
+            <!-- Widget -->
+            <div class="mad-widget">
+              <h6 class="mad-widget-title">My Friends</h6>
+              <div class="mad-widget-inner">
+                <div class="mad-media-gallery mad-users item-col-3">
+                  <div class="mad-col">
+                    <a href="#" class="mad-user"><img src="images/77x77_photo1.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user offline"><img src="images/77x77_photo2.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user"><img src="images/77x77_photo3.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user"><img src="images/77x77_photo4.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user"><img src="images/77x77_photo5.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user offline"><img src="images/77x77_photo6.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user offline"><img src="images/77x77_photo7.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user"><img src="images/77x77_photo8.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user"><img src="images/77x77_photo9.png" alt=""></a>
+                  </div>
+                </div>
+                <a href="#" class="mad-link">View All (45)</a>
+              </div>
+            </div>
+            <!-- Widget -->
+            <div class="mad-widget">
+              <h6 class="mad-widget-title">My Photos</h6>
+              <div class="mad-widget-inner">
+                <div class="mad-media-gallery item-col-3">
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img7.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img8.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img9.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img10.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img11.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img12.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img13.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img14.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img15.jpg" alt=""></a>
+                  </div>
+                </div>
+                <a href="#" class="mad-link">View All (176)</a>
+              </div>
+            </div>
+            <!-- End of Widget -->
+            <!-- Widget -->
+            <div class="mad-widget">
+              <h6 class="mad-widget-title">My Friends</h6>
+              <div class="mad-widget-inner">
+                <div class="mad-media-gallery mad-users item-col-3">
+                  <div class="mad-col">
+                    <a href="#" class="mad-user"><img src="images/77x77_photo10.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user offline"><img src="images/77x77_photo11.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user"><img src="images/77x77_photo12.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user"><img src="images/77x77_photo13.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user"><img src="images/77x77_photo14.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user offline"><img src="images/77x77_photo15.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user offline"><img src="images/77x77_photo16.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user"><img src="images/77x77_photo17.png" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#" class="mad-user"><img src="images/77x77_photo18.png" alt=""></a>
+                  </div>
+                </div>
+                <a href="#" class="mad-link">View All (39)</a>
+              </div>
+            </div>
+            <!-- End of Widget -->
+          </aside>
+          <!-- End of Sidebar -->
+          <!-- Main -->
+          <main id="main" class="col-lg-6">
+            <div class="content-element-3">
+              <!-- Section -->
+              <div class="mad-section">
+                <!-- Ask form -->
+                <form class="mad-ask-form">
+                  <div class="label">4000</div>
+                  <textarea rows="2" placeholder="Say what is on your mind..."></textarea>
+                </form>
+                <!-- End of Ask form -->
+                <div class="mad-section-inner small-type">
+                  <a href="#" class="mad-img-link"><img src="images/soc-line.jpg" alt=""></a>
+                </div>
+              </div>
+              <!-- End of Section -->
+              <!-- Section -->
+              <div class="mad-section">
+                <!-- Post buttons -->
+                <div class="mad-post-buttons">
+                  <a href="#"><i class="material-icons-outlined">remove_red_eye</i><span>Following</span></a>
+                  <a href="#"><i class="material-icons-outlined">library_books</i><span>Show my posts</span></a>
+                  <a href="#" class="mad-icon-btn"><i class="material-icons-outlined">search</i></a>
+                  <a href="#" class="mad-icon-btn hash">#</a>
+                </div>
+                <!-- End of Post buttons -->
+              </div>
+              <!-- End of Section -->
+              <!-- Section -->
+              <div class="mad-section">
+                <!-- Section label -->
+                <div class="mad-label-wrap">
+                  <div class="mad-section-label">Pinned</div>
+                </div>
+                <!-- End of Section label -->
+                <div class="mad-section-inner no-pb">
+                  <!-- Profile item -->
+                  <div class="mad-profile style-2">
+                    <!-- Profile photo -->
+                    <div class="mad-profile-photo"><img src="images/70x70_photo1.png" alt=""></div>
+                    <!-- Profile info -->
+                    <div class="mad-profile-info mad-dropdown">
+                      <a href="#" class="mad-prof-action"><span class="material-icons-outlined">more_vert</span></a>
+                      <button type="button" class="mad-profile-name mad-dropdown-title" aria-expanded="false">John Doe</button>
+                      <!-- Dropdown element -->
+                      <div class="mad-dropdown-element top-drop" aria-hidden="true">
+                        <div class="mad-profile-section">
+                          <div class="mad-profile-img">
+                            <img src="images/317x119_img1.jpg" alt="">
+                          </div>
+                          <div class="mad-profile style-2">
+                            <div class="mad-profile-photo"><img src="images/56x56_photo2.png" alt=""></div>
+                            <div class="mad-profile-name">John Doe</div>
+                          </div>
+                        </div>
+                        <div class="mad-post-buttons">
+                          <div><i class="material-icons-outlined">remove_red_eye</i>842</div>
+                          <div><i class="material-icons-outlined">thumb_up_alt</i>157</div>
+                        </div>
+                      </div>
+                      <!-- End of Dropdown element -->
+                      <span>posted <i class="fab fa-youtube"></i> "Video Uploads in PeepSo!"</span>
+                      <div class="mad-post-info">
+                        <div class="mad-time">10 months ago <i class="fas fa-globe-americas"></i></div>
+                      </div>
+                    </div>
+                    <!-- End of Profile info -->
+                  </div>
+                  <!-- End of Profile item -->
+                  <p>Video Uploads are now possible with PeepSo. This is an example of an uploaded video. Video Uploads are controlled
+                    by a
+                    cron job that runs every 5 minutes. After uploading your video to this demo site, wait up to 5 minutes. Refresh
+                    the page
+                    and you’ll see it on the stream.</p>
+                  <p>Users are notified by email when their video becomes available.</p>
+                  <p class="mad-text-extra">Please note: the file upload limit, just like many other aspects of this feature are
+                    completely configurable by the
+                    admin. We set a limit on the demo just for a few mb, but it can easily handle huge files.</p>
+                  <p>
+                    <a href="#" class="mad-link"><b>#VideoUploads</b></a>
+                    <a href="#" class="mad-link"><b>#Video</b></a>
+                    <a href="#" class="mad-link"><b>#Awesome</b></a>
+                    <a href="#" class="mad-link"><b>#GoPeepSo!</b></a>
+                  </p>
+                  <div class="content-element-3">
+                    <img src="images/606x378_img1.jpg" alt="">
+                  </div>
+                  <div class="content-element">
+                    <h6 class="mad-title no-pd mad-text-extra">Video Uploads in PeepSo!</h6>
+                    <div class="mad-text-micro">demo.peepso.com</div>
+                  </div>
+                  <p class="mad-text-small">Video Uploads are now possible with PeepSo. This is an example of an uploaded video. Video
+                    Uploads are controlled by a
+                    cron job that runs every 5 minutes. After uploading your video to this demo site, wait up to 5 minutes. Refresh
+                    the page
+                    and you’</p>
+                  <!-- Post buttons -->
+                  <div class="mad-post-buttons mad-inner-item">
+                    <a href="#"><i class="material-icons-outlined">thumb_up_alt</i><span>Like</span></a>
+                    <a href="#"><i class="material-icons-outlined">mode_comment</i><span>Comment</span></a>
+                    <a href="#"><i class="material-icons-outlined">share</i><span>Share</span></a>
+                  </div>
+                  <!-- End of Post buttons -->
+                  <div class="mad-soc-activity mad-inner-item">
+                    <div class="mad-col">
+                      <img src="images/soc-activity.jpg" alt="">&nbsp;
+                      <a href="#" class="mad-link">6 people</a>
+                    </div>
+                    <div class="mad-col">
+                      <a href="#" class="mad-link">Show 1 comment</a>
+                    </div>
+                  </div>
+                  <!-- Profile comments -->
+                  <div class="mad-profile-list mad-inner-item">
+                    <!-- Comment -->
+                    <div class="mad-profile-item">
+                      <div class="mad-profile style-2">
+                        <div class="mad-profile-photo"><img src="images/56x56_photo2.png" alt=""></div>
+                        <div class="mad-profile-info">
+                          <a href="#" class="mad-prof-action"><span class="material-icons-outlined">delete_outline</span></a>
+                          <button type="button" class="mad-profile-name mad-dropdown-title">John Doe</button>
+                          <span> Click to play!</span>
+                          <div class="mad-post-info">
+                            <div class="mad-time">6 months ago</div>
+                            <div class="mad-meta">
+                              <a href="#"><i class="material-icons-outlined">thumb_up_alt</i>Like</a>
+                              <a href="#"><i class="material-icons-outlined">reply</i>Reply</a>
+                              <a href="#"><i class="material-icons-outlined">edit</i>Edit</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Comment -->
+                    <div class="mad-profile-item">
+                      <div class="mad-profile style-2">
+                        <div class="mad-profile-photo"><img src="images/56x56_photo3.png" alt=""></div>
+                        <div class="mad-profile-info">
+                          <a href="#" class="mad-prof-action"><span class="material-icons-outlined">delete_outline</span></a>
+                          <a href="#" class="mad-prof-action warning"><span class="material-icons-outlined">warning</span></a>
+                          <button type="button" class="mad-profile-name no-icon mad-dropdown-title">Romeo Caruthers</button>
+                          <span> This is so dope! Love it!</span>
+                          <div class="mad-post-info">
+                            <div class="mad-time">5 months ago</div>
+                            <div class="mad-meta">
+                              <a href="#"><i class="material-icons-outlined">thumb_up_alt</i>Like</a>
+                              <a href="#"><i class="material-icons-outlined">reply</i>Reply</a>
+                              <a href="#"><i class="material-icons-outlined">edit</i>Edit</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Comment -->
+                    <div class="mad-profile-item">
+                      <div class="mad-profile style-2">
+                        <div class="mad-profile-photo"><img src="images/56x56_photo4.png" alt=""></div>
+                        <div class="mad-profile-info">
+                          <a href="#" class="mad-prof-action"><span class="material-icons-outlined">delete_outline</span></a>
+                          <a href="#" class="mad-prof-action warning"><span class="material-icons-outlined">warning</span></a>
+                          <button type="button" class="mad-profile-name no-icon mad-dropdown-title">Debbie Begaye</button>
+                          <span> So good <img src="images/smile.png" alt=""></span>
+                          <div class="mad-post-info">
+                            <div class="mad-time">6 months ago</div>
+                            <div class="mad-meta">
+                              <a href="#"><i class="material-icons-outlined">thumb_up_alt</i>Like</a>
+                              <a href="#"><i class="material-icons-outlined">reply</i>Reply</a>
+                              <a href="#"><i class="material-icons-outlined">edit</i>Edit</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Write a Comment -->
+                    <div class="mad-write-comment">
+                      <img src="images/42x42_photo6.png" alt="">
+                      <form>
+                        <input type="text" placeholder="Write a comment">
+                        <div class="mad-comment-btn">
+                          <button><i class="material-icons-outlined">camera_alt</i></button>
+                          <button class="gif"><i class="material-icons-outlined">gif</i></button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- End of Profile comments -->
+                </div>
+              </div>
+              <!-- End of Section -->
+              <!-- Section -->
+              <div class="mad-section">
+                <!-- Section label -->
+                <div class="mad-label-wrap">
+                  <div class="mad-section-label">Pinned</div>
+                </div>
+                <!-- End of Section label -->
+                <div class="mad-section-inner no-pb">
+                  <!-- Profiel item -->
+                  <div class="mad-profile style-2">
+                    <div class="mad-profile-photo"><img src="images/70x70_photo1.png" alt=""></div>
+                    <div class="mad-profile-info">
+                      <a href="#" class="mad-prof-action"><span class="material-icons-outlined">more_vert</span></a>
+                      <button type="button" class="mad-profile-name mad-dropdown-title">John Doe</button>
+                      <span>added 10 photos to the album:</span> <br>
+                      <a href="#">What a fantastic trip! </a>
+                      <a href="#"><i class="fas fa-map-marker-alt"></i> Siem Reap Province</a>
+                      <div class="mad-post-info">
+                        <div class="mad-time">10 months ago <i class="fas fa-globe-americas"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End of Profiel item -->
+                  <p>It was an amazing trip! Visited Siem Reap in Cambodia and with it Angkor Wat and a few other temples. We didn't
+                    have
+                    time to see it all. In all seriousness, you'd need a few weeks to get to see it all.</p>
+                  <p>Totally worth it and unforgettable.</p>
+                  <div class="content-element-4">
+                    <!-- Gallery -->
+                    <div class="mad-gallery">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <a href="#" class="mad-gallery-item" data-arctic-modal="#mad-modal"><img src="images/296x294_img1.jpg" alt=""></a>
+                        </div>
+                        <div class="col-sm-6">
+                          <a href="#" class="mad-gallery-item" data-arctic-modal="#mad-modal"><img src="images/296x294_img2.jpg" alt=""></a>
+                        </div>
+                        <div class="col-sm-4">
+                          <a href="#" class="mad-gallery-item" data-arctic-modal="#mad-modal"><img src="images/193x189_img1.jpg" alt=""></a>
+                        </div>
+                        <div class="col-sm-4">
+                          <a href="#" class="mad-gallery-item" data-arctic-modal="#mad-modal"><img src="images/193x189_img2.jpg" alt=""></a>
+                        </div>
+                        <div class="col-sm-4">
+                          <a href="#" class="mad-gallery-item" data-arctic-modal="#mad-modal"><span>+6</span><img src="images/193x189_img3.jpg" alt=""></a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Gallery -->
+                  </div>
+                  <!-- Post buttons -->
+                  <div class="mad-post-buttons mad-inner-item">
+                    <a href="#"><i class="material-icons-outlined">thumb_up_alt</i><span>Like</span></a>
+                    <a href="#"><i class="material-icons-outlined">mode_comment</i><span>Comment</span></a>
+                    <a href="#"><i class="material-icons-outlined">share</i><span>Share</span></a>
+                  </div>
+                  <!-- End of Post buttons -->
+                  <div class="mad-soc-activity mad-inner-item">
+                    <div class="mad-col">
+                      <img src="images/soc-activity.jpg" alt="">&nbsp;
+                      <a href="#" class="mad-link">14 people</a>
+                    </div>
+                  </div>
+                  <!-- Profile comments -->
+                  <div class="mad-profile-list mad-inner-item">
+                    <!-- Comment -->
+                    <div class="mad-profile-item">
+                      <div class="mad-profile style-2">
+                        <div class="mad-profile-photo"><img src="images/56x56_photo2.png" alt=""></div>
+                        <div class="mad-profile-info">
+                          <a href="#" class="mad-prof-action"><span class="material-icons-outlined">delete_outline</span></a>
+                          <a href="#" class="mad-prof-action warning"><span class="material-icons-outlined">warning</span></a>
+                          <button type="button" class="mad-profile-name mad-dropdown-title no-icon">William Torres</button>
+                          <span> Fantastic!</span>
+                          <div class="mad-post-photo"><img src="images/450x231_img1.jpg" alt=""></div>
+                          <div class="mad-post-info">
+                            <div class="mad-time">1 year ago <a href="#">3 people like this</a></div>
+                            <div class="mad-meta">
+                              <a href="#"><i class="material-icons-outlined">thumb_up_alt</i>Like</a>
+                              <a href="#"><i class="material-icons-outlined">reply</i>Reply</a>
+                              <a href="#"><i class="material-icons-outlined">edit</i>Edit</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Sub comment -->
+                      <div class="mad-profile inner style-2">
+                        <div class="mad-profile-photo"><img src="images/42x42_photo1.png" alt=""></div>
+                        <div class="mad-profile-info">
+                          <a href="#" class="mad-prof-action"><span class="material-icons-outlined">delete_outline</span></a>
+                          <a href="#" class="mad-prof-action warning"><span class="material-icons-outlined">warning</span></a>
+                          <button type="button" class="mad-profile-name mad-dropdown-title no-icon">Andrew Simmons</button>
+                          <a href="#">William</a>
+                          <span> that's right!</span>
+                          <div class="mad-post-photo"><img src="images/412x231_img1.jpg" alt=""></div>
+                          <div class="mad-post-info">
+                            <div class="mad-time">1 year ago <a href="#">1 people like this</a></div>
+                            <div class="mad-meta">
+                              <a href="#"><i class="material-icons-outlined">thumb_up_alt</i>Like</a>
+                              <a href="#"><i class="material-icons-outlined">reply</i>Reply</a>
+                              <a href="#"><i class="material-icons-outlined">edit</i>Edit</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Sub comment -->
+                      <div class="mad-profile inner style-2">
+                        <div class="mad-profile-photo"><img src="images/42x42_photo6.png" alt=""></div>
+                        <div class="mad-profile-info">
+                          <a href="#" class="mad-prof-action"><span class="material-icons-outlined">delete_outline</span></a>
+                          <button type="button" class="mad-profile-name mad-dropdown-title">John Doe</button>
+                          <span> yes! That's the first one we saw. But trust me, it's not nearly as empty as the gif shows. There's a
+                            lot of tourists.</span>
+                          <div class="mad-post-info">
+                            <div class="mad-time">5 months ago</div>
+                            <div class="mad-meta">
+                              <a href="#"><i class="material-icons-outlined">thumb_up_alt</i>Like</a>
+                              <a href="#"><i class="material-icons-outlined">reply</i>Reply</a>
+                              <a href="#"><i class="material-icons-outlined">edit</i>Edit</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Comment -->
+                    <div class="mad-profile-item">
+                      <div class="mad-profile style-2">
+                        <div class="mad-profile-photo"><img src="images/56x56_photo3.png" alt=""></div>
+                        <div class="mad-profile-info">
+                          <a href="#" class="mad-prof-action"><span class="material-icons-outlined">delete_outline</span></a>
+                          <a href="#" class="mad-prof-action warning"><span class="material-icons-outlined">warning</span></a>
+                          <button type="button" class="mad-profile-name no-icon mad-dropdown-title">Romeo Caruthers</button>
+                          <span> I'm planning on visiting Cambodia in January 2019. Starting the year strong! <a href="#"
+                              class="mad-link"><b>#travelrocks</b></a></span>
+                          <div class="mad-post-info">
+                            <div class="mad-time">5 months ago</div>
+                            <div class="mad-meta">
+                              <a href="#"><i class="material-icons-outlined">thumb_up_alt</i>Like</a>
+                              <a href="#"><i class="material-icons-outlined">reply</i>Reply</a>
+                              <a href="#"><i class="material-icons-outlined">edit</i>Edit</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Comment -->
+                    <div class="mad-write-comment">
+                      <img src="images/42x42_photo6.png" alt="">
+                      <form>
+                        <input type="text" placeholder="Write a comment">
+                        <div class="mad-comment-btn">
+                          <button><i class="material-icons-outlined">camera_alt</i></button>
+                          <button class="gif"><i class="material-icons-outlined">gif</i></button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- End of Profile comments -->
+                </div>
+              </div>
+              <!-- End of Section -->
+              <!-- Section -->
+              <div class="mad-section">
+                <div class="mad-section-inner no-pb">
+                  <!-- Profile item -->
+                  <div class="mad-profile style-2">
+                    <div class="mad-profile-photo"><img src="images/70x70_photo1.png" alt=""></div>
+                    <div class="mad-profile-info">
+                      <a href="#" class="mad-prof-action"><span class="material-icons-outlined">more_vert</span></a>
+                      <button type="button" class="mad-profile-name mad-dropdown-title">John Doe</button>
+                      <span>uploaded a new profile cover</span>
+                      <div class="mad-post-info">
+                        <div class="mad-time">4 months ago <i class="fas fa-globe-americas"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End of Profile item -->
+                  <div class="content-element-4">
+                    <img src="images/606x301_img1.jpg" alt="">
+                  </div>
+                  <!-- Post buttons -->
+                  <div class="mad-post-buttons mad-inner-item">
+                    <a href="#"><i class="material-icons-outlined">thumb_up_alt</i><span>Like</span></a>
+                    <a href="#"><i class="material-icons-outlined">mode_comment</i><span>Comment</span></a>
+                    <a href="#"><i class="material-icons-outlined">share</i><span>Share</span></a>
+                  </div>
+                  <!-- End of Post buttons -->
+                </div>
+              </div>
+              <!-- End of Section -->
+            </div>
+            <div class="align-center">
+              <a href="#" class="btn">Load More</a>
+            </div>
+          </main>
+          <!-- End of Main -->
+          <!-- Sidebar -->
+          <aside class="mad-sidebar col-lg-3">
+            <!-- Widget -->
+            <div class="mad-widget">
+              <h6 class="mad-widget-title">Community Hashtags</h6>
+              <div class="mad-widget-inner">
+                <div class="tagcloud">
+                  <a href="#" class="tag-small">#animal</a>
+                  <a href="#" class="tag-small">#bali</a>
+                  <a href="#" class="tag-small">#beauty</a>
+                  <a href="#" class="tag-small">#bikes</a>
+                  <a href="#" class="tag-small">#bold</a>
+                  <a href="#" class="tag-small">#dog</a>
+                  <a href="#" class="tag-small">#friends</a>
+                  <a href="#" class="tag-medium">#funny</a>
+                  <a href="#" class="tag-small">#groups</a>
+                  <a href="#" class="tag-small">#hotel</a>
+                  <a href="#" class="tag-small">#italics</a>
+                  <a href="#" class="tag-small">#lao</a>
+                  <a href="#" class="tag-small">#laos</a>
+                  <a href="#" class="tag-small">#markdown</a>
+                  <a href="#" class="tag-small">#motobikes</a>
+                  <a href="#" class="tag-small">#nyc</a>
+                  <a href="#" class="tag-small">#peepso</a>
+                  <a href="#">#photo</a>
+                  <a href="#" class="tag-small">#plugin</a>
+                  <a href="#" class="tag-small">#poll</a>
+                  <a href="#" class="tag-small">#pollsplugin</a>
+                  <a href="#" class="tag-small">#road</a>
+                  <a href="#" class="tag-small">#strikethrough</a>
+                  <a href="#" class="tag-small">#sunset</a>
+                  <a href="#" class="tag-small">#tourism</a>
+                  <a href="#" class="tag-medium">#tourist</a>
+                  <a href="#">#travel</a>
+                  <a href="#" class="tag-small">#unicorns</a>
+                  <a href="#" class="tag-medium">#video</a>
+                </div>
+              </div>
+            </div>
+            <!-- End of Widget -->
+            <!-- Widget -->
+            <div class="mad-widget">
+              <h6 class="mad-widget-title">Latest Community Photos</h6>
+              <div class="mad-widget-inner">
+                <div class="mad-media-gallery item-col-3">
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img1.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img2.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img3.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img4.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img5.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img6.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img16.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img17.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img18.jpg" alt=""></a>
+                  </div>
+                </div>
+                <a href="#" class="mad-link">View All (176)</a>
+              </div>
+            </div>
+            <!-- End of Widget -->
+            <!-- Widget -->
+            <div class="mad-widget">
+              <h6 class="mad-widget-title">Community Media</h6>
+              <div class="mad-widget-inner">
+                <div class="mad-media-gallery video-gallery item-col-2">
+                  <div class="mad-col">
+                    <div class="mad-gallery-item">
+                      <img src="images/123x84_img1.jpg" alt="">
+                      <a href="https://www.youtube.com/embed/mUzkMUcn2Kk?rel=0&amp;showinfo=0&amp;autohide=2&amp;controls=0&amp;playlist=J2Y_ld0KL-4&amp;enablejsapi=1"
+                        class="mad-play" data-fancybox="video-gallery"></a>
+                    </div>
+                  </div>
+                  <div class="mad-col">
+                    <div class="mad-gallery-item">
+                      <img src="images/123x84_img2.jpg" alt="">
+                      <a href="https://www.youtube.com/embed/mUzkMUcn2Kk?rel=0&amp;showinfo=0&amp;autohide=2&amp;controls=0&amp;playlist=J2Y_ld0KL-4&amp;enablejsapi=1"
+                        class="mad-play" data-fancybox="video-gallery"></a>
+                    </div>
+                  </div>
+                  <div class="mad-col">
+                    <div class="mad-gallery-item">
+                      <img src="images/123x84_img3.jpg" alt="">
+                      <a href="https://www.youtube.com/embed/mUzkMUcn2Kk?rel=0&amp;showinfo=0&amp;autohide=2&amp;controls=0&amp;playlist=J2Y_ld0KL-4&amp;enablejsapi=1"
+                        class="mad-play" data-fancybox="video-gallery"></a>
+                    </div>
+                  </div>
+                  <div class="mad-col">
+                    <div class="mad-gallery-item">
+                      <img src="images/123x84_img4.jpg" alt="">
+                      <a href="https://www.youtube.com/embed/mUzkMUcn2Kk?rel=0&amp;showinfo=0&amp;autohide=2&amp;controls=0&amp;playlist=J2Y_ld0KL-4&amp;enablejsapi=1"
+                        class="mad-play" data-fancybox="video-gallery"></a>
+                    </div>
+                  </div>
+                  <div class="mad-col">
+                    <div class="mad-gallery-item">
+                      <img src="images/123x84_img5.jpg" alt="">
+                      <a href="https://www.youtube.com/embed/mUzkMUcn2Kk?rel=0&amp;showinfo=0&amp;autohide=2&amp;controls=0&amp;playlist=J2Y_ld0KL-4&amp;enablejsapi=1"
+                        class="mad-play" data-fancybox="video-gallery"></a>
+                    </div>
+                  </div>
+                  <div class="mad-col">
+                    <div class="mad-gallery-item">
+                      <img src="images/123x84_img6.jpg" alt="">
+                      <a href="https://www.youtube.com/embed/mUzkMUcn2Kk?rel=0&amp;showinfo=0&amp;autohide=2&amp;controls=0&amp;playlist=J2Y_ld0KL-4&amp;enablejsapi=1"
+                        class="mad-play" data-fancybox="video-gallery"></a>
+                    </div>
+                  </div>
+                  <div class="mad-col">
+                    <div class="mad-gallery-item">
+                      <img src="images/123x84_img7.jpg" alt="">
+                      <a href="https://www.youtube.com/embed/mUzkMUcn2Kk?rel=0&amp;showinfo=0&amp;autohide=2&amp;controls=0&amp;playlist=J2Y_ld0KL-4&amp;enablejsapi=1"
+                        class="mad-play" data-fancybox="video-gallery"></a>
+                    </div>
+                  </div>
+                  <div class="mad-col">
+                    <div class="mad-gallery-item">
+                      <img src="images/123x84_img8.jpg" alt="">
+                      <a href="https://www.youtube.com/embed/mUzkMUcn2Kk?rel=0&amp;showinfo=0&amp;autohide=2&amp;controls=0&amp;playlist=J2Y_ld0KL-4&amp;enablejsapi=1"
+                        class="mad-play" data-fancybox="video-gallery"></a>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="mad-link">View All (229)</a>
+              </div>
+            </div>
+            <!-- End of Widget -->
+          </aside>
+          <!-- End of Sidebar -->
+        </div>
+      </div>
+    </div>
+    <!--================ Footer ================-->
+    <footer id="mad-footer" class="mad-footer">
+      <!--================ Footer row ================-->
+      <div class="mad-footer-main">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <!--================ Widget ================-->
+              <section>
+                <h6 class="mad-widget-title">About</h6>
+                <p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet,
+                consectetuer adipiscing elit.</p>
+                <p>Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend,
+                elit. Aenean auctor wisi et urna.</p>
+              </section>
+              <!--================ End of Widget ================-->
+            </div>
+            <div class="col-lg-3">
+              <!--================ Widget ================-->
+              <div class="mad-widget">
+                <h6 class="mad-widget-title">Latest Community Photos</h6>
+                <div class="mad-media-gallery item-col-3">
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img1.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img2.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img3.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img4.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img5.jpg" alt=""></a>
+                  </div>
+                  <div class="mad-col">
+                    <a href="#"><img src="images/77x77_img6.jpg" alt=""></a>
+                  </div>
+                </div>
+              </div>
+              <!--================ End of Widget ================-->
+            </div>
+            <div class="col-lg-3">
+              <!--================ Widget ================-->
+              <div class="mad-widget">
+                <h6 class="mad-widget-title">Community Media</h6>
+                <div class="mad-media-gallery video-gallery item-col-2">
+                  <div class="mad-col">
+                    <div class="mad-gallery-item">
+                      <img src="images/123x84_img1.jpg" alt="">
+                      <a href="https://www.youtube.com/embed/mUzkMUcn2Kk?rel=0&amp;showinfo=0&amp;autohide=2&amp;controls=0&amp;playlist=J2Y_ld0KL-4&amp;enablejsapi=1" class="mad-play" data-fancybox="video-gallery"></a>
+                    </div>
+                  </div>
+                  <div class="mad-col">
+                    <div class="mad-gallery-item">
+                      <img src="images/123x84_img2.jpg" alt="">
+                      <a href="https://www.youtube.com/embed/mUzkMUcn2Kk?rel=0&amp;showinfo=0&amp;autohide=2&amp;controls=0&amp;playlist=J2Y_ld0KL-4&amp;enablejsapi=1" class="mad-play" data-fancybox="video-gallery"></a>
+                    </div>
+                  </div>
+                  <div class="mad-col">
+                    <div class="mad-gallery-item">
+                      <img src="images/123x84_img3.jpg" alt="">
+                      <a href="https://www.youtube.com/embed/mUzkMUcn2Kk?rel=0&amp;showinfo=0&amp;autohide=2&amp;controls=0&amp;playlist=J2Y_ld0KL-4&amp;enablejsapi=1" class="mad-play" data-fancybox="video-gallery"></a>
+                    </div>
+                  </div>
+                  <div class="mad-col">
+                    <div class="mad-gallery-item">
+                      <img src="images/123x84_img4.jpg" alt="">
+                      <a href="https://www.youtube.com/embed/mUzkMUcn2Kk?rel=0&amp;showinfo=0&amp;autohide=2&amp;controls=0&amp;playlist=J2Y_ld0KL-4&amp;enablejsapi=1" class="mad-play" data-fancybox="video-gallery"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--================ End of Widget ================-->
+            </div>
+            <div class="col-lg-3">
+              <!--================ Widget ================-->
+              <div class="mad-widget">
+                <h6 class="mad-widget-title">Popular Hashtags</h6>
+                <div class="tagcloud">
+                  <a href="#">#travel</a>
+                  <a href="#">#photo</a>
+                  <a href="#" class="tag-medium">#video</a>
+                  <a href="#">#funny</a>
+                  <a href="#" class="tag-medium">#tourist</a>
+                  <a href="#" class="tag-small">#markdown</a>
+                  <a href="#" class="tag-small">#beautiful</a>
+                  <a href="#" class="tag-small">#peepso</a>
+                  <a href="#" class="tag-small">#plugin</a>
+                  <a href="#" class="tag-small">#poll</a>
+                  <a href="#" class="tag-small">#pollsplugin</a>
+                  <a href="#" class="tag-small">#road</a>
+                  <a href="#" class="tag-small">#strikethrough</a>
+                  <a href="#" class="tag-small">#sunset</a>
+                </div>
+              </div>
+              <!--================ End of Widget ================-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--================ End of Footer row ================-->
+      <!--================ Footer row ================-->
+      <div class="mad-footer-bottom">
+        <div class="container">
+          <div class="mad-widget">Copyright © 2020 <span>Matebook</span>. All Rights Reserved.</div>
+        </div>
+      </div>
+      <!--================ End of Footer row ================-->
+    </footer>
+    <!--================ End of Footer ================-->
+    <!--================ Mad Modal ================-->
+    <div class="mad-d-none">
+      <div id="mad-modal" class="mad-modal">
+        <div class="mad-gallery-modal">
+          <button class="arcticmodal-close"><i class="material-icons">close</i></button>
+          <div class="mad-col">
+            <div class="owl-carousel mad-grid mad-simple-slideshow">
+              <div class="mad-grid-item">
+                <img src="images/1325x1008_img1.jpg" alt="">
+              </div>
+              <div class="mad-grid-item">
+                <img src="images/1325x1008_img2.jpg" alt="">
+              </div>
+              <div class="mad-grid-item">
+                <img src="images/1325x1008_img3.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="mad-col">
+            <div class="mad-section-inner no-pb">
+              <!-- Profiel item -->
+              <div class="mad-profile style-2">
+                <div class="mad-profile-photo"><img src="images/70x70_photo1.png" alt=""></div>
+                <div class="mad-profile-info">
+                  <button type="button" class="mad-profile-name mad-dropdown-title">John Doe</button>
+                  <span>added 10 photos to the album:</span>
+                  <a href="#">What a fantastic trip! </a>
+                  <div class="mad-post-info">
+                    <div class="mad-time">10 months ago <i class="fas fa-globe-americas"></i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="mad-post-buttons mad-inner-item">
+                <a href="#"><i class="material-icons-outlined">thumb_up_alt</i><span>Like</span></a>
+                <a href="#"><i class="material-icons-outlined">delete_outline</i><span>Delete</span></a>
+                <a href="#"><i class="material-icons-outlined">edit</i><span>Edit</span></a>
+              </div>
+              <div class="mad-soc-activity mad-inner-item">
+                <div class="mad-col">
+                  <img src="images/soc-activity.jpg" alt="">&nbsp;
+                  <a href="#" class="mad-link">6 people</a>
+                </div>
+              </div>
+              <div class="mad-profile-list mad-inner-item">
+                <!-- Comment -->
+                <div class="mad-profile-item">
+                  <div class="mad-profile style-2">
+                    <div class="mad-profile-photo"><img src="images/56x56_photo2.png" alt=""></div>
+                    <div class="mad-profile-info">
+                      <a href="#" class="mad-prof-action"><span class="material-icons-outlined">delete_outline</span></a>
+                      <button type="button" class="mad-profile-name mad-dropdown-title">John Doe</button>
+                      <span> Click to play!</span>
+                      <div class="mad-post-info">
+                        <div class="mad-time">6 months ago</div>
+                        <div class="mad-meta">
+                          <a href="#"><i class="material-icons-outlined">thumb_up_alt</i>Like</a>
+                          <a href="#"><i class="material-icons-outlined">reply</i>Reply</a>
+                          <a href="#"><i class="material-icons-outlined">edit</i>Edit</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Comment -->
+                <div class="mad-profile-item">
+                  <div class="mad-profile style-2">
+                    <div class="mad-profile-photo"><img src="images/56x56_photo3.png" alt=""></div>
+                    <div class="mad-profile-info">
+                      <a href="#" class="mad-prof-action"><span class="material-icons-outlined">delete_outline</span></a>
+                      <a href="#" class="mad-prof-action warning"><span class="material-icons-outlined">warning</span></a>
+                      <button type="button" class="mad-profile-name no-icon mad-dropdown-title">Romeo Caruthers</button>
+                      <span> This is so dope! Love it!</span>
+                      <div class="mad-post-info">
+                        <div class="mad-time">5 months ago</div>
+                        <div class="mad-meta">
+                          <a href="#"><i class="material-icons-outlined">thumb_up_alt</i>Like</a>
+                          <a href="#"><i class="material-icons-outlined">reply</i>Reply</a>
+                          <a href="#"><i class="material-icons-outlined">edit</i>Edit</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Comment -->
+                <div class="mad-profile-item">
+                  <div class="mad-profile style-2">
+                    <div class="mad-profile-photo"><img src="images/56x56_photo4.png" alt=""></div>
+                    <div class="mad-profile-info">
+                      <a href="#" class="mad-prof-action"><span class="material-icons-outlined">delete_outline</span></a>
+                      <a href="#" class="mad-prof-action warning"><span class="material-icons-outlined">warning</span></a>
+                      <button type="button" class="mad-profile-name no-icon mad-dropdown-title">Debbie Begaye</button>
+                      <span> So good <img src="images/smile.png" alt=""></span>
+                      <div class="mad-post-info">
+                        <div class="mad-time">6 months ago</div>
+                        <div class="mad-meta">
+                          <a href="#"><i class="material-icons-outlined">thumb_up_alt</i>Like</a>
+                          <a href="#"><i class="material-icons-outlined">reply</i>Reply</a>
+                          <a href="#"><i class="material-icons-outlined">edit</i>Edit</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Write a Comment -->
+                <div class="mad-write-comment">
+                  <img src="images/42x42_photo6.png" alt="">
+                  <form>
+                    <input type="text" placeholder="Write a comment">
+                    <div class="mad-comment-btn">
+                      <button><i class="material-icons-outlined">camera_alt</i></button>
+                      <button class="gif"><i class="material-icons-outlined">gif</i></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--================ End of Mad Modal ================-->
+  </div>
+  <script src="vendors/modernizr.js"></script>
+  <script src="vendors/jquery-3.3.1.min.js"></script>
+  <script src="vendors/jquery.easing.1.3.min.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="vendors/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
+  <script src="vendors/fancybox/jquery.fancybox.min.js"></script>
+  <script src="vendors/monkeysan.validator.min.js"></script>
+  <script src="vendors/handlebars-v4.0.5.min.js"></script>
+  <script src="vendors/mad.customselect.js"></script>
+  <script src="vendors/retina.min.js"></script>
+  <script src="js/modules/mad.sticky-header-section.min.js"></script>
+  <script src="js/webs.js"></script>
+</body>
+</html>
