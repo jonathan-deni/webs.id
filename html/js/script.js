@@ -1,16 +1,10 @@
-function textAreaAdjust(element) {
-    var textleft = document.getElementById('remaining-text');
-
-    const max-length = 500;
-
-    element.style.height = "1px";
-    element.style.height = (25+element.scrollHeight)+"px";
-
-
-
-}
-$("#textarea").keyup(function(){
-    $(this).style.height = "1px";
-    $(this).style.height = (25+element.scrollHeight)+"px";
-    $("#remaining-text").text((500 - $(this).val().length));
+$(document).ready(function () {
+    $("#textarea").keyup(function () {
+        $(this).css('overflow','hidden')
+        while($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth"))) {
+            $(this).height($(this).height()+1);
+            // if($(this).height > 500) $(this).height(500);
+        };
+        $("#remaining-text").text((500 - $(this).val().length));
+    });
 });
