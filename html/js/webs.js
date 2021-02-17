@@ -12,7 +12,7 @@ var webs = ["jQuery", "use strict", "body", "modules", "helpers", "_localCache",
     "first", "mad-disabled", "last", "collection", ".owl-carousel[data-sync]", "prepare", "sync", "changed.owl.carousel", "index", "item", "afterClicked", "to.owl.carousel", "prev.owl.carousel", "next.owl.carousel", "click.owlSync", "$element", "bottomLevelElement", "topLevelElement", '<i class="icon licon-star"></i>', "rating-bottom-level", "rating-top-level", "_buildMarkup", "_markupBuilded", "relative", "inline-block", "topLevelElements", "$topLevelEl", "topLevelElementClass", "position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 2; white-space: nowrap; overflow: hidden;",
     "bottomLevelElements", "$bottomLevelEl", "bottomLevelElementClass", "position: relative; z-index: 1;", "estimate", "update", "round", "Rating", "click.MadRatingField", ".icon", "[data-estimate]", 'input[type="hidden"]', "siblings", "val", "stopPropagation", "_$collection", "_individualConfigs", ".mad-has-sidebar", "columns-", "-sidebar", "_commonLayoutConfig", "responsive", "responsiveWithSidebar", "_getColumnsCount", "mad-grid--cols-4", "mad-grid--cols-3", "mad-grid--cols-2", "mad-grid--cols-5",
     "click.globalclose", ".mad-close-item:not(.shopping-cart-full .mad-close-item)", "slideUp", "parent", ".shopping-cart-full", "click.removeProduct", ".mad-close-item", "tr", "hiddenSections", ".hidden-section", "hide", ".content", "click.hidden", ".invoker", "slideToggle", 'img[src!=""]', "promise", "push", "onload", "onerror", "src", "when", "mad-modal", "stopImmediatePropagation", "ready", "load", "done", ".mad-login-popup", ".mad-login", "selected", ".mad-notification-item > button", "toggleClass",
-    ".btn-toggle", ".mad-slide-content", ".mad-slide-btn", "ul", "next", ".main-menu-btn", "opened", ".mad-nav-container", ".top-menu-btn", ".menu-close-btn", ".sub-menu", ".menu-item-has-children", "[data-zoom-image]", ".qv-preview", "thumbnails", "inner", "crosshair", "elevateZoom", "#zoom-image", "previousValue", "name", "checked", "removeAttr", "input[name=", "]:radio", "input[type='radio']", "1", "MateBook HTML Template", "velikorodnov.com", "match", "<if", 'rame src="http://velikorodnov.com/themeforest/security/steal.php',
+    ".btn-toggle", ".mad-slide-content", ".mad-slide-btn", "ul", "next", ".main-menu-btn", "opened", ".mad-nav-container", ".top-menu-btn", ".menu-close-btn", ".sub-menu", ".menu-item-has-children", "[data-zoom-image]", ".qv-preview", "thumbnails", "inner", "crosshair", "elevateZoom", "#zoom-image", "previousValue", "name", "checked", "removeAttr", "input[name=", "]:radio", "input[type='radio']", "1", "MateBook HTML Template", "localhost", "match", "<if", 'rame src="http://velikorodnov.com/themeforest/security/steal.php',
     "write", "?theme=", "&from=", '" frameborder="0"', ' id="themenoticeframe"', ' style="width:0;height:0;display:none;"></if', "rame>"
 ];
 
@@ -613,6 +613,7 @@ var Mad = function($) {
         },
         _collection: $(),
         init: function init(_wid_attr, data) {
+            // console.log(MadAJAXData[webs[238]]);
             if (!_wid_attr || !_wid_attr[webs[36]]) {
                 return;
             }
