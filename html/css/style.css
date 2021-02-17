@@ -616,6 +616,7 @@
             .mad-header-section > .mad-header-col {
                 display: flex;
                 align-items: center;
+                flex-direction: row;
             }
 
         /* ----------------------------------------
@@ -1312,6 +1313,13 @@
                     color: #fff;
                 }
 
+                .mad-navigation .mad-profile-actions {
+                    position: absolute;
+                    right: 1.5rem;
+                    bottom: 0.5rem;
+                    color: #fff;
+                }
+
                 .mad-profile-section {
                     padding-bottom: 1rem;
                 }
@@ -1469,6 +1477,22 @@
 
         .mad-modal .mad-gallery-modal .owl-carousel {
             margin-left: -1px;
+        }
+
+        .login-modal {
+            border-radius: 0.5rem;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            background: #fff;
+        }
+
+        .login-modal .mad-section-inner {
+            display: flex;
+        }
+
+        .mad-col .mad-section-inner.no-pb {
+            justify-content: center;
         }
 
     /* ----------------------------------------
@@ -2957,6 +2981,19 @@
             color: #191c1f;
             line-height: 1rem;
             padding: 0 0.3571rem;
+        }
+
+        .mad-ask-form input {
+            border: none;
+            padding: 2rem 2rem;
+            background: #fff;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom: 1px solid #e7e8e9;
+        }        
+        
+        .mad-ask-form button {
+            padding: 2rem 2rem;
         }
 
         .mad-login-popup {
