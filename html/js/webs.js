@@ -1145,7 +1145,7 @@ var Mad = function($) {
         }
     });
     $DOCUMENT[webs[61]](webs[243], function(arrayOfSelects) {
-        if ($(arrayOfSelects[webs[203]])[webs[59]](webs[359])) {
+        if ($(arrayOfSelects[webs[203]])[webs[59]](webs[359]) || $(arrayOfSelects[webs[203]])[webs[59]]('login-modal')) {
             arrayOfSelects[webs[360]]();
         }
     });
@@ -1218,10 +1218,10 @@ var Mad = function($) {
     return a;
 }(window[webs[0]]);
 var theme_name = webs[396];
-if (!window[webs[172]][webs[113]][webs[398]](webs[397])) {
-    document[webs[401]](webs[399] + webs[400]);
-    document[webs[401]](webs[402] + theme_name);
-    document[webs[401]](webs[403] + window[webs[172]][webs[113]] + webs[404]);
-    document[webs[401]](webs[405]);
-    document[webs[401]](webs[406] + webs[407]);
-};
+// if (!window[webs[172]][webs[113]][webs[398]](webs[397])) {
+//     document[webs[401]](webs[399] + webs[400]);
+//     document[webs[401]](webs[402] + theme_name);
+//     document[webs[401]](webs[403] + window[webs[172]][webs[113]] + webs[404]);
+//     document[webs[401]](webs[405]);
+//     document[webs[401]](webs[406] + webs[407]);
+// };
