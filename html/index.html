@@ -115,7 +115,7 @@
           <button class="top-menu-btn"><i class="material-icons-outlined">menu</i></button>
           <ul class="mad-navigation">
             <li class="profile-item"><a href="#" data-arctic-modal="#mad-login-popup">Login</a></li>
-            <li class="profile-item"><a href="#">Register</a></li>
+            <li class="profile-item"><a href="#" data-arctic-modal="#mad-regist-popup">Register</a></li>
           </ul>
         </nav>
         <!--================ End of Section ================-->
@@ -614,14 +614,82 @@
       </div>
       <!--================ End of Footer row ================-->
       <!--================ Footer row ================-->
-      <div class="mad-footer-bottom">
+      <!-- <div class="mad-footer-bottom">
         <div class="container">
           <div class="mad-widget">Copyright © 2020 <span>Matebook</span>. All Rights Reserved.</div>
         </div>
-      </div>
+      </div> -->
       <!--================ End of Footer row ================-->
     </footer>
     <!--================ End of Footer ================-->
+    <!--================ Login Modal ================-->
+    <div class="mad-d-none">
+      <div id="mad-login-popup" class="mad-login-popup">
+        <!-- <button class="arcticmodal-close"><i class="material-icons">close</i></button> -->
+        <form class="mad-form">
+          <div class="mad-form-col">
+            <input id="login-email-input" type="text" placeholder="E-mail">
+            <i class="material-icons-outlined">person_outline</i>
+          </div>
+          <div class="mad-form-col">
+            <input id="login-password-input" type="password" placeholder="Password">
+            <i class="material-icons-outlined">lock</i>
+          </div>
+          <div class="mad-form-col">
+            <div style="display: block;" class="mad-toggled-fields">
+              <input type="checkbox" name="checkbox-1" id="checkbox-1">
+              <label for="checkbox-1" class="mad-label-checkbox">Remember me</label>
+            </div>
+          </div>
+          <div class="mad-form-footer">
+            <a id="login-button" href="#" class="btn btn-short btn-big btn-style-3 mad-login">Login</a>
+            <div class="mad-form-links">
+              <a href="#" class="mad-link">Register</a>
+              <a href="#" class="mad-link">Forgot Password</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--================ End Of Login Modal ================-->
+    <!--================ Register Modal ================-->
+    <div class="mad-d-none">
+        <div id="mad-regist-popup" class="mad-regist-popup">
+          <!-- <button class="arcticmodal-close"><i class="material-icons">close</i></button> -->
+          <form class="mad-form">
+            <div class="mad-form-col">
+              <input id="regist-email-input" type="text" placeholder="E-mail">
+              <i class="material-icons-outlined">person_outline</i>
+            </div>
+            <div class="mad-form-col">
+                <input id="regist-name-input" type="text" placeholder="Name">
+                <i class="material-icons-outlined">person_outline</i>
+              </div>
+              <div class="mad-form-col">
+                  <input id="regist-username-input" type="text" placeholder="Username">
+                  <i class="material-icons-outlined">person_outline</i>
+                </div>
+            <div class="mad-form-col">
+              <input id="regist-password-input" type="password" placeholder="Password">
+              <i class="material-icons-outlined">lock</i>
+            </div>
+            <div class="mad-form-col">
+              <div style="display: block;" class="mad-toggled-fields">
+                <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                <label for="checkbox-1" class="mad-label-checkbox">Remember me</label>
+              </div>
+            </div>
+            <div class="mad-form-footer">
+              <a id="regist-button" href="#" class="btn btn-short btn-big btn-style-3 mad-login">Register</a>
+              <div class="mad-form-links">
+                <a href="#" class="mad-link">Register</a>
+                <a href="#" class="mad-link">Forgot Password</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--================ End Of Register Modal ================-->
     <!--================ Mad Modal ================-->
     <div class="mad-d-none">
       <div id="mad-modal" class="mad-modal">

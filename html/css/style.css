@@ -3006,8 +3006,22 @@
             padding: 2rem;
             background: #fff;
             z-index: 2;
-            display: none;
+            display: flex;
         }
+
+        .mad-regist-popup {
+            position: absolute;
+            top: 0;
+            left: 14px;
+            right: 14px;
+            border-radius: 0.5rem;
+            border: 1px solid #e7e8e9;
+            padding: 2rem;
+            background: #fff;
+            z-index: 2;
+            display: flex;
+        }
+
 
         .mad-login-popup form input {
             padding-right: 56px;
