@@ -1501,6 +1501,7 @@
 
         .arcticmodal-container_i2 {
             padding: 42px 7.1429rem;
+            justify-content: center;
         }
 
         .arcticmodal-container table {
@@ -2997,29 +2998,33 @@
         }
 
         .mad-login-popup {
-            position: absolute;
+            /* position: absolute;
             top: 0;
             left: 14px;
-            right: 14px;
+            right: 14px; */
             border-radius: 0.5rem;
             border: 1px solid #e7e8e9;
             padding: 2rem;
             background: #fff;
             z-index: 2;
             display: flex;
+            width: 25%;
+            justify-content: center;
         }
 
         .mad-regist-popup {
-            position: absolute;
+            /* position: absolute;
             top: 0;
             left: 14px;
-            right: 14px;
+            right: 14px; */
             border-radius: 0.5rem;
             border: 1px solid #e7e8e9;
             padding: 2rem;
             background: #fff;
             z-index: 2;
             display: flex;
+            width: 25%;
+            justify-content: center;
         }
 
 

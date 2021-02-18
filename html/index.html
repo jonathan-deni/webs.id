@@ -95,11 +95,11 @@
         </div>
         <!--================ End of Column ================-->
         <!--================ Column ================-->
-        <div class="mad-header-col">
+        <div id="logged-in-element" class="mad-header-col">
           <div class="mad-profile align-items-center">
             <div class="mad-profile-photo"><img src="images/56x56_photo1.png" alt=""></div>
             <div class="mad-dropdown">
-              <button type="button" class="mad-profile-name mad-dropdown-title">John Doe</button>
+              <button id="profile-email" type="button" class="mad-profile-name mad-dropdown-title"></button>
               <div class="mad-dropdown-element">
                 <ul class="mad-vr-list with-icons">
                   <li><a href="#"><i class="material-icons-outlined">settings</i>Edit Account</a></li>
@@ -111,11 +111,12 @@
           <!--================ End of Column ================-->
         </div>
         <!--================ Column ================-->
-        <nav class="mad-nav-container">
+        <nav id="not-login-element" class="mad-nav-container">
           <button class="top-menu-btn"><i class="material-icons-outlined">menu</i></button>
           <ul class="mad-navigation">
-            <li class="profile-item"><a href="#" data-arctic-modal="#mad-login-popup">Login</a></li>
-            <li class="profile-item"><a href="#" data-arctic-modal="#mad-regist-popup">Register</a></li>
+            <li class="profile-item"><a href="#mad-login-popup" rel="modal:open">Login</a></li>
+            <!-- <li class="profile-item"><a href="#" data-arctic-modal="#mad-modal">Login</a></li> -->
+            <li class="profile-item"><a href="#mad-regist-popup" rel="modal:open">Register</a></li>
           </ul>
         </nav>
         <!--================ End of Section ================-->
@@ -623,9 +624,8 @@
     </footer>
     <!--================ End of Footer ================-->
     <!--================ Login Modal ================-->
-    <div class="mad-d-none">
+    <div id="mad-d-none" class="mad-d-none">
       <div id="mad-login-popup" class="mad-login-popup">
-        <!-- <button class="arcticmodal-close"><i class="material-icons">close</i></button> -->
         <form class="mad-form">
           <div class="mad-form-col">
             <input id="login-email-input" type="text" placeholder="E-mail">
@@ -638,7 +638,7 @@
           <div class="mad-form-col">
             <div style="display: block;" class="mad-toggled-fields">
               <input type="checkbox" name="checkbox-1" id="checkbox-1">
-              <label for="checkbox-1" class="mad-label-checkbox">Remember me</label>
+              <!-- <label for="checkbox-1" class="mad-label-checkbox">Remember me</label> -->
             </div>
           </div>
           <div class="mad-form-footer">
@@ -655,7 +655,6 @@
     <!--================ Register Modal ================-->
     <div class="mad-d-none">
         <div id="mad-regist-popup" class="mad-regist-popup">
-          <!-- <button class="arcticmodal-close"><i class="material-icons">close</i></button> -->
           <form class="mad-form">
             <div class="mad-form-col">
               <input id="regist-email-input" type="text" placeholder="E-mail">
@@ -681,10 +680,6 @@
             </div>
             <div class="mad-form-footer">
               <a id="regist-button" href="#" class="btn btn-short btn-big btn-style-3 mad-login">Register</a>
-              <div class="mad-form-links">
-                <a href="#" class="mad-link">Register</a>
-                <a href="#" class="mad-link">Forgot Password</a>
-              </div>
             </div>
           </form>
         </div>
@@ -714,7 +709,7 @@
               <div class="mad-profile style-2">
                 <div class="mad-profile-photo"><img src="images/70x70_photo1.png" alt=""></div>
                 <div class="mad-profile-info">
-                  <button type="button" class="mad-profile-name mad-dropdown-title">John Doe</button>
+                  <button type="button" id="profile-email" class="mad-profile-name mad-dropdown-title">John Doe</button>
                   <span>added 10 photos to the album:</span>
                   <a href="#">What a fantastic trip! </a>
                   <div class="mad-post-info">
@@ -830,6 +825,8 @@
   <script src="js/modules/mad.sticky-header-section.min.js"></script>
   <script src="js/wd.js"></script>
   <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </body>
 
 </html>

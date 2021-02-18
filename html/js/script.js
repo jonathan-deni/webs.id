@@ -1,8 +1,63 @@
+function getCookie(cname, cvalue, exdays) {
+    var result = document.cookie.match(new RegExp(cname) + '=([^;]+)')
+
+    result && (result = JSON.parse(result[1]));
+    return result
+}
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function setLoggedInUser(websToken, email) {
+    var loginElm = document.getElementById("logged-in-element");
+    var notLoginElm = document.getElementById("not-login-element");
+
+    if (!websToken) {
+        loginElm.style.display = "none";
+        notLoginElm.style.display = "block"
+    } else {
+        document.querySelector('#profile-email').textContent = email;
+        document.querySelector('#profile-email').innerText = email;
+
+        loginElm.style.display="block"
+        notLoginElm.style.display = "none";
+        setCookie('websToken', websToken, 1)
+    }
+}
+
+
+$(window).on('load', function() {
+    var loginElm = document.getElementById("logged-in-element");
+    var notLoginElm = document.getElementById("not-login-element");
+
+    if(getCookie('websToken')) {
+        loginElm.style.display = "block";
+        notLoginElm.style.display = "none"
+    } else {
+        loginElm.style.display = "none";
+        notLoginElm.style.display = "block"
+    }
+})
+
+
 $(document).ready(function () {
     $("#textarea").keyup(function () {
-        $(this).css('overflow','hidden')
-        while($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth"))) {
-            $(this).height($(this).height()+1);
+        $(this).css('overflow', 'hidden')
+        while ($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth"))) {
+            $(this).height($(this).height() + 1);
+            // if($(this).height > 500) $(this).height(500);
+        };
+        $("#remaining-text").text((500 - $(this).val().length));
+    });
+
+    $("#rightheader").on(function () {
+        $(this).css('overflow', 'hidden')
+        while ($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth"))) {
+            $(this).height($(this).height() + 1);
             // if($(this).height > 500) $(this).height(500);
         };
         $("#remaining-text").text((500 - $(this).val().length));
@@ -22,23 +77,16 @@ $(document).ready(function () {
             type: 'post',
             data: jsonRequest,
             success: function (data) {
-                console.log("<<<LOGIN RESPONSE ", data)
-                if(data.userId == 0){
-                    alert(data.status.message);
+                if(!data.success){
+                    alert(data.msg);
                 }else{
-                    userid = data.userId;
-                    setLoggedInUser(data);
+                    console.log('server token',data.data.token.token)
+                    $.modal.close()
+                    var websToken = data.data.token.token
+                    setLoggedInUser(websToken, email);
                 }
             }
         });
-        console.log("LOGIN EMAIL ", email, " PASSWORD ", password)
-        // $(this).css('overflow','hidden')
-        // while($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth"))) {
-        //     $(this).height($(this).height()+1);
-        //     // if($(this).height > 500) $(this).height(500);
-        // };
-        // $("#remaining-text").text((500 - $(this).val().length));
-
     });
 
     $("#regist-button").click(function () {
@@ -46,7 +94,7 @@ $(document).ready(function () {
         var password = document.getElementById("regist-password-input").value;
         var name = document.getElementById("regist-name-input").value;
         var username = document.getElementById("regist-username-input").value;
-        
+
         console.log("REGISTER EMAIL ", email, " PASSWORD ", password)
         var jsonRequest =
         {
@@ -60,21 +108,17 @@ $(document).ready(function () {
             type: 'post',
             data: jsonRequest,
             success: function (data) {
-                console.log("<<<REGIST RESPONSE ", data)
-                if(data.userId == 0){
+                if (data.success) {
                     alert(data.status.message);
-                }else{
-                    userid = data.userId;
-                    setLoggedInUser(data);
+                    $(document).on("beforeClose", function (param) {
+                        if ($(param["target"])["hasClass"]("mad-login-popup")) {
+                            param["stopImmediatePropagation"]();
+                            $("#mad-d-none").css('display', 'none')
+                        }
+                    });
                 }
             }
         });
-        // $(this).css('overflow','hidden')
-        // while($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth"))) {
-        //     $(this).height($(this).height()+1);
-        //     // if($(this).height > 500) $(this).height(500);
-        // };
-        // $("#remaining-text").text((500 - $(this).val().length));
 
     });
 });
