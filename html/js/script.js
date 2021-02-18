@@ -23,18 +23,18 @@ function setLoggedInUser(websToken, email) {
         document.querySelector('#profile-email').textContent = email;
         document.querySelector('#profile-email').innerText = email;
 
-        loginElm.style.display="block"
+        loginElm.style.display = "block"
         notLoginElm.style.display = "none";
         setCookie('websToken', websToken, 1)
     }
 }
 
 
-$(window).on('load', function() {
+$(window).on('load', function () {
     var loginElm = document.getElementById("logged-in-element");
     var notLoginElm = document.getElementById("not-login-element");
 
-    if(getCookie('websToken')) {
+    if (getCookie('websToken')) {
         loginElm.style.display = "block";
         notLoginElm.style.display = "none"
     } else {
@@ -77,10 +77,10 @@ $(document).ready(function () {
             type: 'post',
             data: jsonRequest,
             success: function (data) {
-                if(!data.success){
+                if (!data.success) {
                     alert(data.msg);
-                }else{
-                    console.log('server token',data.data.token.token)
+                } else {
+                    console.log('server token', data.data.token.token)
                     $.modal.close()
                     var websToken = data.data.token.token
                     setLoggedInUser(websToken, email);
@@ -109,9 +109,25 @@ $(document).ready(function () {
             success: function (data) {
                 if (data.success) {
                     $.modal.close()
+                    $("#email-verify-popup").modal()
                 }
             }
         });
 
     });
+
+    $("#post-event-idea").click(function () {
+        $("#choose-idea-popup").modal({
+            closeExisting: false
+        })
+    })
+
+    $('input:radio[name="idea"]').change(
+        function () {
+            if ($(this).is(':checked')) {
+                $('#post-event-idea').val($(this).val())
+            }
+        });
+
+
 });

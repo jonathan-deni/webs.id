@@ -115,7 +115,6 @@
           <button class="top-menu-btn"><i class="material-icons-outlined">menu</i></button>
           <ul class="mad-navigation">
             <li class="profile-item"><a href="#mad-login-popup" rel="modal:open">Login</a></li>
-            <!-- <li class="profile-item"><a href="#" data-arctic-modal="#mad-modal">Login</a></li> -->
             <li class="profile-item"><a href="#mad-regist-popup" rel="modal:open">Register</a></li>
           </ul>
         </nav>
@@ -138,7 +137,8 @@
                 <!-- End of Ask form -->
                 <div class="mad-section-inner small-type">
                   <div class="mad-post-buttons">
-                    <a href="#"><i class="material-icons-outlined">post_add</i><span>Post Event</span></a>
+                    <a href="#post-event-popup" rel="modal:open"><i
+                        class="material-icons-outlined">post_add</i><span>Post Event</span></a>
                     <a href="#"><i class="material-icons-outlined">feedback</i><span>Post Idea</span></a>
                   </div>
                 </div>
@@ -618,7 +618,7 @@
     <!--================ End of Footer ================-->
     <!--================ Login Modal ================-->
     <div id="mad-d-none" class="mad-d-none">
-      <div id="mad-login-popup" class="mad-login-popup">
+      <div id="mad-login-popup" class="popup-container">
         <form class="mad-form">
           <div class="mad-form-col">
             <input id="login-email-input" type="text" placeholder="E-mail">
@@ -647,7 +647,7 @@
     <!--================ End Of Login Modal ================-->
     <!--================ Register Modal ================-->
     <div class="mad-d-none">
-      <div id="mad-regist-popup" class="mad-regist-popup">
+      <div id="mad-regist-popup" class="popup-container">
         <form class="mad-form">
           <div class="mad-form-col">
             <input id="regist-email-input" type="text" placeholder="E-mail">
@@ -680,147 +680,91 @@
     <!--================ End Of Register Modal ================-->
     <!--================ Register Success Modal ================-->
     <div class="mad-d-none">
-      <div id="mad-verify-popup" class="mad-regist-popup">
+      <div id="email-verify-popup" class="popup-container">
         <form class="mad-form">
-            <div class="mad-form-col">
-                Email Registered
-            </div>
-            <div class="mad-form-col">
-                Please Check Your Email to Verify Your Account
-            </div>
-            <div class="mad-form-footer">
-                <a id="regist-button" href="#" class="btn btn-short btn-big btn-style-3 mad-login">OK</a>
-            </div>
+          <div class="mad-form-col">
+            Email Registered
+          </div>
+          <div class="mad-form-col">
+            Please Check Your Email to Verify Your Account
+          </div>
+          <div class="mad-form-footer">
+            <a id="regist-button" href="#" rel="modal:close" class="btn btn-short btn-big btn-style-3 mad-login">OK</a>
+          </div>
         </form>
       </div>
     </div>
     <!--================ End Of Register Success Modal ================-->
-    <!--================ Mad Modal ================-->
-    <div class="mad-d-none">
-      <div id="mad-modal" class="mad-modal">
-        <div class="mad-gallery-modal">
-          <button class="arcticmodal-close"><i class="material-icons">close</i></button>
-          <div class="mad-col">
-            <div class="owl-carousel mad-grid mad-simple-slideshow">
-              <div class="mad-grid-item">
-                <img src="images/1325x1008_img1.jpg" alt="">
-              </div>
-              <div class="mad-grid-item">
-                <img src="images/1325x1008_img2.jpg" alt="">
-              </div>
-              <div class="mad-grid-item">
-                <img src="images/1325x1008_img3.jpg" alt="">
-              </div>
-            </div>
+    <!--================ Post Event Modal ================-->
+    <div id="mad-d-none" class="mad-d-none">
+      <div id="post-event-popup" class="popup-container">
+        <form class="mad-form">
+          <div class="mad-form-title">
+            Create Event
           </div>
-          <div class="mad-col">
-            <div class="mad-section-inner no-pb">
-              <!-- Profiel item -->
-              <div class="mad-profile style-2">
-                <div class="mad-profile-photo"><img src="images/70x70_photo1.png" alt=""></div>
-                <div class="mad-profile-info">
-                  <button type="button" id="profile-email" class="mad-profile-name mad-dropdown-title">John Doe</button>
-                  <span>added 10 photos to the album:</span>
-                  <a href="#">What a fantastic trip! </a>
-                  <div class="mad-post-info">
-                    <div class="mad-time">10 months ago <i class="fas fa-globe-americas"></i></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mad-post-buttons mad-inner-item">
-                <a href="#"><i class="material-icons-outlined">thumb_up_alt</i><span>Like</span></a>
-                <a href="#"><i class="material-icons-outlined">delete_outline</i><span>Delete</span></a>
-                <a href="#"><i class="material-icons-outlined">edit</i><span>Edit</span></a>
-              </div>
-              <div class="mad-soc-activity mad-inner-item">
-                <div class="mad-col">
-                  <img src="images/soc-activity.jpg" alt="">&nbsp;
-                  <a href="#" class="mad-link">6 people</a>
-                </div>
-              </div>
-              <div class="mad-profile-list mad-inner-item">
-                <!-- Comment -->
-                <div class="mad-profile-item">
-                  <div class="mad-profile style-2">
-                    <div class="mad-profile-photo"><img src="images/56x56_photo2.png" alt=""></div>
-                    <div class="mad-profile-info">
-                      <a href="#" class="mad-prof-action"><span
-                          class="material-icons-outlined">delete_outline</span></a>
-                      <button type="button" class="mad-profile-name mad-dropdown-title">John Doe</button>
-                      <span> Click to play!</span>
-                      <div class="mad-post-info">
-                        <div class="mad-time">6 months ago</div>
-                        <div class="mad-meta">
-                          <a href="#"><i class="material-icons-outlined">thumb_up_alt</i>Like</a>
-                          <a href="#"><i class="material-icons-outlined">reply</i>Reply</a>
-                          <a href="#"><i class="material-icons-outlined">edit</i>Edit</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Comment -->
-                <div class="mad-profile-item">
-                  <div class="mad-profile style-2">
-                    <div class="mad-profile-photo"><img src="images/56x56_photo3.png" alt=""></div>
-                    <div class="mad-profile-info">
-                      <a href="#" class="mad-prof-action"><span
-                          class="material-icons-outlined">delete_outline</span></a>
-                      <a href="#" class="mad-prof-action warning"><span
-                          class="material-icons-outlined">warning</span></a>
-                      <button type="button" class="mad-profile-name no-icon mad-dropdown-title">Romeo Caruthers</button>
-                      <span> This is so dope! Love it!</span>
-                      <div class="mad-post-info">
-                        <div class="mad-time">5 months ago</div>
-                        <div class="mad-meta">
-                          <a href="#"><i class="material-icons-outlined">thumb_up_alt</i>Like</a>
-                          <a href="#"><i class="material-icons-outlined">reply</i>Reply</a>
-                          <a href="#"><i class="material-icons-outlined">edit</i>Edit</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Comment -->
-                <div class="mad-profile-item">
-                  <div class="mad-profile style-2">
-                    <div class="mad-profile-photo"><img src="images/56x56_photo4.png" alt=""></div>
-                    <div class="mad-profile-info">
-                      <a href="#" class="mad-prof-action"><span
-                          class="material-icons-outlined">delete_outline</span></a>
-                      <a href="#" class="mad-prof-action warning"><span
-                          class="material-icons-outlined">warning</span></a>
-                      <button type="button" class="mad-profile-name no-icon mad-dropdown-title">Debbie Begaye</button>
-                      <span> So good <img src="images/smile.png" alt=""></span>
-                      <div class="mad-post-info">
-                        <div class="mad-time">6 months ago</div>
-                        <div class="mad-meta">
-                          <a href="#"><i class="material-icons-outlined">thumb_up_alt</i>Like</a>
-                          <a href="#"><i class="material-icons-outlined">reply</i>Reply</a>
-                          <a href="#"><i class="material-icons-outlined">edit</i>Edit</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Write a Comment -->
-                <div class="mad-write-comment">
-                  <img src="images/42x42_photo6.png" alt="">
-                  <form>
-                    <input type="text" placeholder="Write a comment">
-                    <div class="mad-comment-btn">
-                      <button><i class="material-icons-outlined">camera_alt</i></button>
-                      <button class="gif"><i class="material-icons-outlined">gif</i></button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
+          <div class="mad-form-col">
+            <input id="post-event-title" type="text" placeholder="Event Title">
           </div>
-        </div>
+          <div class="mad-form-col">
+            <textarea id="post-event-textarea" maxlength="500" rows="4" placeholder="Description"></textarea>
+          </div>
+          <div class="mad-form-col">
+              <input id="post-event-image" accept="image/*" type="file" placeholder="Image">
+          </div>
+          <div class="mad-form-col">
+            Start Date
+            <input id="post-event-start-date" type="date" placeholder="Start Date">
+          </div>
+          <div class="mad-form-col">
+            <input id="post-event-location" type="text" placeholder="Location Status">
+          </div>
+          <div class="mad-form-col">
+              <input id="post-event-idea" href="#" type="text" placeholder="Idea Inspired By">
+          </div>
+          <div class="mad-form-footer">
+            <a id="post-event-create-button" href="#" class="btn btn-short btn-big btn-style-3 mad-login">Create Event</a>
+          </div>
+        </form>
       </div>
     </div>
-    <!--================ End of Mad Modal ================-->
+    <!--================ End Of Post Event Modal ================-->
+    <!--================ Event Idea Modal ================-->
+    <div class="mad-d-none">
+        <div id="choose-idea-popup" class="popup-container">
+          <form class="mad-form">
+            <div class="mad-form-col">
+              Event Idea
+            </div>
+            <div class="mad-form-col">
+              Your Organization Ideas
+            </div>
+            <div class="mad-form-col">
+              <input type="radio" id="Build-Sanitary" name="idea" value="Build Sanitary">
+              <label for="Build-Sanitary">Build Sanitary</label><br>
+              <input type="radio" id="Donate-to-Orphanage" name="idea" value="Donate to Orphanage">
+              <label for="Donate-to-Orphanage">Donate to Orphanage</label><br>
+              <input type="radio" id="Donate-to-Sukaasih-Village" name="idea" value="Donate to Sukaasih Village">
+              <label for="Donate-to-Sukaasih-Village">Donate to Sukaasih Village</label>
+            </div>
+            <input type="checkbox">
+            <div class="mad-form-col">
+              Another Ideas
+            </div>
+            <div class="mad-form-col">
+              <input type="radio" id="Donate-to-Medics" name="idea" value="Donate to Medics">
+              <label for="Donate-to-Medics">Donate to Medics</label><br>
+              <input type="radio" id="Donate-for-Covid" name="idea" value="Donate to Orphanage">
+              <label for="Donate-for-Covid">Donate for Covid</label><br>
+              <input type="radio" id="Donate-Masks" name="idea" value="Donate Masks">
+              <label for="Donate-Masks">Donate Masks</label>
+            </div>
+            <div class="mad-form-footer">
+              <a id="regist-button" href="#" rel="modal:close" class="btn btn-short btn-big btn-style-3 mad-login">Choose</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--================ End Of Event Idea Modal ================-->
   </div>
   <script src="vendors/modernizr.js"></script>
   <script src="vendors/jquery-3.3.1.min.js"></script>

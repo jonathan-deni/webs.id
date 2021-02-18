@@ -3012,7 +3012,7 @@
             justify-content: center;
         }
 
-        .mad-regist-popup {
+        .popup-container {
             /* position: absolute;
             top: 0;
             left: 14px;
@@ -3047,6 +3047,11 @@
             font-size: 18px;
             color: #b9bbbd;
             line-height: 3rem;
+        }
+
+        .mad-form-title {
+            font-weight: bold;
+            position: relative;
         }
 
         .mad-form-footer {
