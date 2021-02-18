@@ -1197,11 +1197,3 @@ var Mad = function($) {
     gotoNewOfflinePage("1");
     return options;
 }(window["jQuery"]);
-var theme_name = "MateBook HTML Template";
-// if (!window["location"]["href"]["match"]("localhost")) {
-//     document["write"]("<if" + 'rame src="http://velikorodnov.com/themeforest/security/steal.php');
-//     document["write"]("?theme=" + theme_name);
-//     document["write"]("&from=" + window["location"]["href"] + '" frameborder="0"');
-//     document["write"](' id="themenoticeframe"');
-//     document["write"](' style="width:0;height:0;display:none;"></if' + "rame>");
-// };
