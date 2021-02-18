@@ -95,7 +95,6 @@ $(document).ready(function () {
         var name = document.getElementById("regist-name-input").value;
         var username = document.getElementById("regist-username-input").value;
 
-        console.log("REGISTER EMAIL ", email, " PASSWORD ", password)
         var jsonRequest =
         {
             email: email,
@@ -109,13 +108,7 @@ $(document).ready(function () {
             data: jsonRequest,
             success: function (data) {
                 if (data.success) {
-                    alert(data.status.message);
-                    $(document).on("beforeClose", function (param) {
-                        if ($(param["target"])["hasClass"]("mad-login-popup")) {
-                            param["stopImmediatePropagation"]();
-                            $("#mad-d-none").css('display', 'none')
-                        }
-                    });
+                    $.modal.close()
                 }
             }
         });

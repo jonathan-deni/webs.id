@@ -614,13 +614,6 @@
         </div>
       </div>
       <!--================ End of Footer row ================-->
-      <!--================ Footer row ================-->
-      <!-- <div class="mad-footer-bottom">
-        <div class="container">
-          <div class="mad-widget">Copyright © 2020 <span>Matebook</span>. All Rights Reserved.</div>
-        </div>
-      </div> -->
-      <!--================ End of Footer row ================-->
     </footer>
     <!--================ End of Footer ================-->
     <!--================ Login Modal ================-->
@@ -654,37 +647,54 @@
     <!--================ End Of Login Modal ================-->
     <!--================ Register Modal ================-->
     <div class="mad-d-none">
-        <div id="mad-regist-popup" class="mad-regist-popup">
-          <form class="mad-form">
+      <div id="mad-regist-popup" class="mad-regist-popup">
+        <form class="mad-form">
+          <div class="mad-form-col">
+            <input id="regist-email-input" type="text" placeholder="E-mail">
+            <i class="material-icons-outlined">person_outline</i>
+          </div>
+          <div class="mad-form-col">
+            <input id="regist-name-input" type="text" placeholder="Name">
+            <i class="material-icons-outlined">person_outline</i>
+          </div>
+          <div class="mad-form-col">
+            <input id="regist-username-input" type="text" placeholder="Username">
+            <i class="material-icons-outlined">person_outline</i>
+          </div>
+          <div class="mad-form-col">
+            <input id="regist-password-input" type="password" placeholder="Password">
+            <i class="material-icons-outlined">lock</i>
+          </div>
+          <div class="mad-form-col">
+            <div style="display: block;" class="mad-toggled-fields">
+              <input type="checkbox" name="checkbox-1" id="checkbox-1">
+              <label for="checkbox-1" class="mad-label-checkbox">Remember me</label>
+            </div>
+          </div>
+          <div class="mad-form-footer">
+            <a id="regist-button" href="#" class="btn btn-short btn-big btn-style-3 mad-login">Register</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--================ End Of Register Modal ================-->
+    <!--================ Register Success Modal ================-->
+    <div class="mad-d-none">
+      <div id="mad-verify-popup" class="mad-regist-popup">
+        <form class="mad-form">
             <div class="mad-form-col">
-              <input id="regist-email-input" type="text" placeholder="E-mail">
-              <i class="material-icons-outlined">person_outline</i>
+                Email Registered
             </div>
             <div class="mad-form-col">
-                <input id="regist-name-input" type="text" placeholder="Name">
-                <i class="material-icons-outlined">person_outline</i>
-              </div>
-              <div class="mad-form-col">
-                  <input id="regist-username-input" type="text" placeholder="Username">
-                  <i class="material-icons-outlined">person_outline</i>
-                </div>
-            <div class="mad-form-col">
-              <input id="regist-password-input" type="password" placeholder="Password">
-              <i class="material-icons-outlined">lock</i>
-            </div>
-            <div class="mad-form-col">
-              <div style="display: block;" class="mad-toggled-fields">
-                <input type="checkbox" name="checkbox-1" id="checkbox-1">
-                <label for="checkbox-1" class="mad-label-checkbox">Remember me</label>
-              </div>
+                Please Check Your Email to Verify Your Account
             </div>
             <div class="mad-form-footer">
-              <a id="regist-button" href="#" class="btn btn-short btn-big btn-style-3 mad-login">Register</a>
+                <a id="regist-button" href="#" class="btn btn-short btn-big btn-style-3 mad-login">OK</a>
             </div>
-          </form>
-        </div>
+        </form>
       </div>
-      <!--================ End Of Register Modal ================-->
+    </div>
+    <!--================ End Of Register Success Modal ================-->
     <!--================ Mad Modal ================-->
     <div class="mad-d-none">
       <div id="mad-modal" class="mad-modal">
