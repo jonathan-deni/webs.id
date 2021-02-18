@@ -3012,6 +3012,21 @@
             justify-content: center;
         }
 
+        .mad-organization-popup {
+            /* position: absolute;
+            top: 0;
+            left: 14px;
+            right: 14px; */
+            border-radius: 0.5rem;
+            border: 1px solid #e7e8e9;
+            padding: 2rem;
+            background: #fff;
+            z-index: 2;
+            display: flex;
+            width: 30%;
+            justify-content: center;
+        }
+
         .mad-regist-popup {
             /* position: absolute;
             top: 0;

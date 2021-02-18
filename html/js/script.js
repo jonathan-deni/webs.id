@@ -45,6 +45,9 @@ $(window).on('load', function() {
 
 
 $(document).ready(function () {
+
+    var token;
+
     $("#textarea").keyup(function () {
         $(this).css('overflow', 'hidden')
         while ($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth"))) {
@@ -83,6 +86,7 @@ $(document).ready(function () {
                     console.log('server token',data.data.token.token)
                     $.modal.close()
                     var websToken = data.data.token.token
+                    token = websToken;
                     setLoggedInUser(websToken, email);
                 }
             }
@@ -113,5 +117,69 @@ $(document).ready(function () {
             }
         });
 
+    });
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            return reader.readAsDataURL(input.files[0]); // convert to base64 string
+        }
+    }
+
+    var ktpOrg;
+    var dokumenOrg;
+
+    $("#ktp-org").change(function() {
+        var input = this;
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.readAsDataURL(input.files[0]);
+            reader.onload = function () {
+                ktpOrg = reader.result;
+            };
+        }
+    });
+
+    $("#dokumen-org").change(function() {
+        var input = this;
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.readAsDataURL(input.files[0]);
+            reader.onload = function () {
+                dokumenOrg = reader.result;
+            };
+        }
+    });
+
+    $('#create-organization').click(function(){
+        var name = document.getElementById("organization-name").value;
+        var about = document.getElementById("about-name").value;
+        var subdomain = document.getElementById("sub-domain-name").value;
+        var alamat = document.getElementById("alamat-org").value;
+
+        var jsonRequest =
+            {
+                token: token,
+                name: name,
+                subdomain: subdomain,
+                about: about,
+                dokumenktp: ktpOrg,
+                dokumenorganisasi: dokumenOrg,
+                alamat: alamat
+            }
+            console.log('jsonRequest', jsonRequest);
+        $.ajax({
+            url: 'https://webs.id/api/organization',
+            type: 'post',
+            data: jsonRequest,
+            success: function (data) {
+                if (data.success) {
+                    $.modal.close()
+                }
+            }
+        });
     });
 });
